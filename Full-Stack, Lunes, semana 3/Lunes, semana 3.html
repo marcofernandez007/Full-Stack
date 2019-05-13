@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+
+<html lang="es-ES" xmlns="http://www.w3.org/1999/xhtml">
+
+<style>
+
+.button {
+background-color: #4CAF50;
+border: none;
+color: white
+padding: 80px 128px;
+text-align: center;
+font-size: 35px;
+display: inter-block;
+cursor: pointer;
+
+}
+</style>
+
+
+<head>
+    <meta charset="utf-8" />
+    <title>OBJETOS Y JSON</title>
+</head>
+<body>
+
+<button class="button" id="botton1" onclick="agregar()">agregue </button>
+
+<button class="button" id="botton2" onclick="modificar()">modifique </button>
+
+<button class="button" id="botton3" onclick="eliminar()">elimina </button>
+
+
+<div id="heroes">
+</div>
+
+<script>
+
+//Objeto
+
+// intro: function(){ console.log("La abilidad es " + this.abilidad + " de " +this.miembro + " uno de " + this.alumnos + " miembros de los vengadores"); },
+// empresas: "rappi"
+// console.log("Nos estamos preparando para la entrevista con "+vengadores.empresas);
+
+//Convertir JSON a strings
+//JSON.parse(json)
+//where json is the variable name of an object
+
+/*
+
+			Ejercicio
+
+			Crearan un JSON del tema que quieran. Debe existir anidacion de JSON
+			-> Crear los siguientes botones:
+			* Un boton que agregue un nuevo dato al JSON
+			* Un boton que modifique algun dato del JSON
+			* un boton que permita eliminar un dato de un JSON
+
+			-> se debe pintar la informacion del JSON en el HTML de forma organizada
+			Debe haber un buen estilo CSS
+
+			*/
+
+
+var jsonAnidados = {
+	"Personas" : [
+		{"nombre": "Hulk", "edad": 40},
+		{"nombre": "Thor", "edad": 39},
+		{"nombre": "Vision", "edad": 45},
+		{"nombre": "Captain Marvel", "edad": 29},
+		{"nombre": "Panther", "edad": 30},
+		{"nombre": "Dr. Strange", "edad": 49},
+		{"nombre": "Ant-man", "edad": 40}
+				]
+};
+
+// document.getElementById("heroes").innerHTML = jsonAnidados.Personas.nombre + " " + jsonAnidados.Personas[0].edad + "<br>" + jsonAnidados.Personas[1].nombre + " " + jsonAnidados.Personas[1].edad + "<br>" + jsonAnidados.Personas[2].nombre + "<br>" + jsonAnidados.Personas[3].nombre + "<br>"
+
+
+function agregar() 
+{
+
+var nombre = prompt("Put in the name of a heroe");
+var edad = prompt("Put the age of the heroe");
+
+var vengadores = {
+	"nombre": nombre,
+	"edad": edad }
+
+jsonAnidados.Personas.push(vengadores);
+
+console.log(jsonAnidados);
+
+}	
+
+//console.log(vengadores[",miembro"]);
+//console.log(vengadores.abilidad);
+//vengadores.intro();
+
+
+
+//document.getElementById("heroes").innerHTML += vengadores.miembro+"<br>"
+//document.getElementById("heroes").innerHTML += vengadores.abilidad
+
+
+function modificar() 
+{
+var nombreNew = prompt("Name");
+var edadNew = prompt("Age");
+var i = prompt ("Line");
+
+jsonAnidados.Personas[i].nombre = nombreNew;
+jsonAnidados.Personas[i].edad = edadNew 
+	
+
+}
+
+function eliminar() 
+{
+jsonAnidados.Personas.pop();
+console.log(jsonAnidados);
+}
+    
+	</script>
+
+</body>
+</html>

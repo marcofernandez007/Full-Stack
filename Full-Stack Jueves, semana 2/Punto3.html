@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Punto 3 Taller 2</title>
+        
+       <script language="JavaScript">
+                function pintar_Fondo(col)
+                {
+                  document.bgColor=col;
+                }
+        </script>  
+
+        <p>Pasa el Mouse por algunos de los cuadros para cambiar el fondo de la pantalla: 
+                
+                <input type="button" style="background:#AAF" onMouseOver="pintar_Fondo('#AAF')"/>       
+                <input type="button" style="background:#ff0000" onMouseOver="pintar_Fondo('ff0000')">       
+                <input type="button" style="background:greenyellow" onMouseOver="pintar_Fondo('greenyellow')">
+                <input type="button" style="background:gray" onMouseOver="pintar_Fondo('gray')">
+                <input type="button" style="background:#FAA" onMouseOver="pintar_Fondo('#FAA')">
+
+                <input type="button" value="Reninciar" onmousedown="pintar_Fondo('#ffffff')">
+
+        </p>            
+
+
+                
+    </body>
+
+</html>

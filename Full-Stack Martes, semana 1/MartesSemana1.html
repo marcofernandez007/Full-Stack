@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Dia #1</title>
+	<script>
+		window.onload
+		var nombre;
+		nombre = prompt ("Ingrese su nombre: ", "Nombre");
+		alert("Bienvenido " + nombre);
+		console.log(nombre);
+
+		var x=5;
+		var y=2;
+
+		var s=x+y;
+		var r=x-y;
+
+		console.log("La suma es de: "+s);
+		console.log("La resta es de: "+r);
+		
+		var d=x/y;
+		var multp=x*y;
+
+		console.log("La division es de:"+d);
+
+
+		if(respuesta>5){
+			alert("Buen trabajo");
+			if(respuesta==6){
+				alert("El numero es igual a 6");
+			}
+			else{
+				alert("El numero no es 6");
+			}
+			else{
+				alert("No es un numero mayor a 5");
+			}
+		}
+
+		//SWITCH
+		var respuesta=prompt("Ingrese un numero del 1 al 3");
+
+		switch(respuesta){
+			case "1":
+				alert("Usted escribio el numero uno");
+				break;
+
+			case "2":
+				alert("Usted escribio el numero uno");
+				break;
+
+			case "3":
+				alert("Usted escribio el numero uno");
+				break;
+			
+			default: 
+				alert("No es un numero entre 1 y 3");
+		}
+		//Bucle for -- Estructura de control iterativa
+		// inicializando 
+
+		//Bucle while
+		var i=0;
+
+		while(i<10){
+			document.write("Numero:" + i + "<br>");
+			i++;
+		}
+
+		// Arreglos -- Array
+		var dias=["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"];
+			for (i=0; i<7; i++){ 
+				console.log(dias[i]);
+			}
+
+</head>
+<body>
+
+</body>
+</html>

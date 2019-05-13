@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Zoom</title>
+	<link rel="stylesheet" href="CSS/Stylesheet1.css" type="text/css"/>
+
+	<title>Zoom</title>
+</head>
+
+<body>
+
+<div id="navbar">
+<button type="button" onclick="zoomin()"> Zoom In</button>
+<button type="button" onclick="zoomout()"> Zoom Out</button>
+</div>
+
+<div class="main">
+
+			<img id="map" src="Imagenes/Bogota.jpg" />				
+	
+</div>
+
+<script>
+
+function zoomin(){
+        var myImg = document.getElementById("map");
+        var currWidth = myImg.clientWidth;
+        if(currWidth == 2500) return false;
+         else{
+            myImg.style.width = (currWidth + 100) + "px";
+        } 
+    }
+ function zoomout(){
+        var myImg = document.getElementById("map");
+        var currWidth = myImg.clientWidth;
+        if(currWidth == 100) return false;
+		 else{
+            myImg.style.width = (currWidth - 100) + "px";
+        }
+    }
+
+</script>
+
+</body>
+</html>

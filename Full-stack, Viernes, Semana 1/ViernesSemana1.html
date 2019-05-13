@@ -1,0 +1,460 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Dia #5</title>
+	<script>
+
+	/*
+	 var cont = '';
+        var nombre = [];
+			
+			cont = prompt('Ingrese un nombre: ');
+        for (i = 0; cont!==""; i++) {
+            
+            if (cont == '') {
+                break;
+            }
+            if (nombre.includes(cont)) {
+                document.write('Nombre repetido <br>');
+                break;
+            }
+            nombre[i] = cont;
+
+        }
+
+        nombre.sort();
+
+        for (i = 0; i < nombre.length; i++) {
+            document.write(nombre[i] + '<br>');
+        }
+
+	
+
+		window.onload 
+		
+		//1 Read in the names
+		var nombres = [];
+		nombre = prompt ("Ingrese nombre: ", "Nombre");
+		while (nombre !==" ") nombres.push(nombre);
+		if (nombres.includes(nombre,0)) 
+		{
+			nombres.pop();
+			document.write("Please dont repeat names");
+		}
+		else 
+		{
+			nombres.push(nombre);
+		}
+
+		// Sort the array alphabetically
+		var sortednombres = nombres.sort(function (a, b) {
+		if (a < b) 
+		{
+			return -1;
+		}
+		else if (a > b) 
+		{
+			return 1;
+		}
+			return 0;
+		});
+		console.log(sortednombres);
+		
+
+		
+		//3 Check whether a given year is a leap year
+		year = prompt ("Ingrese un year: ");
+
+		function leapyear(year)
+		{
+		return (year % 100 === 0) && (year % 400 === 0) && (year % 4 === 0);
+		}
+
+		document.write(leapyear(year))
+
+		//4 Check whether a positive integer is even, odd or prime
+		numero = prompt ("Ingrese un numero no negativo: ", "Numero");
+		//check if even or odd
+		 if (numero % 2 == 0) 
+		 {
+		 document.write("even");
+		 }
+		 else 
+		 {
+		 document.write("odd" + "<br>" );
+		 }
+
+		//Check whether prime or not
+		for(i=2; i <= numero/2; i++)
+				{
+					if(numero%i == 0)
+					{
+						temp = 1;
+						break;
+					}
+				}
+				if(temp = 1)
+				{
+					document.write(numero + "<br>" + "The input number is Prime");
+				}
+				else
+				{
+					document.write(numero + "<br>"  + "The input number is not Prime");
+				}
+	
+		//5 Muestre una palabra o frase ingresada al revés y cuántas letras y espacios.
+		palabra = prompt ("Ingrese una palabra: ", "Palabra");
+
+		 function reverseString(palabra)
+		{
+            var stringRev ="";
+            for(i= 0; i<str.length; i++){
+                stringRev = str[i]+stringRev;
+            }
+            return stringRev;
+		}
+
+		var lettercount = palabra.length;
+		var spaceCount = (palabra.split(" ").length - 1);
+
+		document.write("Reverse word= "+stringRev+"letras= "+lettercount+ "y of spaces= "+spaceCount);
+
+		*/
+
+
+		//6 Convert Arabic numerals to Roman
+		num = prompt ("Ingrese un numero no negativo: ", "Numero");
+
+		function convert(num) { 
+		if(num < 1){ return "";}
+
+		if(num >= 1000){ return "M" + convert(num - 1000);}
+		if(num >= 500){ return "D" + convert(num - 500);}
+		if(num >= 400){ return "CD" + convert(num - 400);}
+		if(num >= 100){ return "C" + convert(num - 100);}
+		if(num >= 40){ return "XL" + convert(num - 40);}
+		if(num >= 10){ return "X" + convert(num - 10);}
+		if(num >= 9){ return "IX" + convert(num - 9);}
+		if(num >= 5){ return "V" + convert(num - 5);}
+		if(num >= 4){ return "IV" + convert(num - 4);}
+		if(num >= 1){ return "I" + convert(num - 1);}  
+		}
+		document.write(convert(num));
+
+		//7 Add a hyphen between every letter
+		palabrasin = prompt ("Ingrese una palabra: ", "Palabra");
+		palabracon = palabrasin.match(/^\s/g).join('-');
+		palabracon = palabrasin.match(/\s/g).join('--');
+
+		document.write(palabracon);
+
+
+		//8 Calculate age
+
+		var dob = prompt ("Insert your date of birth MMAAAADD: ", "DateOfBirth");
+		var year = Number(dob.substr(2, 4));
+		var month = Number(dob.substr(0, 2)) - 1;
+		var day = Number(dob.substr(6, 2));
+		var today = new Date();
+		var ageyear = today.getFullYear() - year;
+		var agemonth = today.getMonth() - month;
+		var ageday = today.getDay() - day;
+		document.write("Tiene "+ageyear+ " years "+agemonth+" months y "+ageday+" days");
+
+
+
+		//9 a Print star patterns
+		  var rows=5;
+			for(var i=1; i <= 10; i=i+2)
+			{
+				for(var j=1; j<=i; j=j+2)
+					{
+					document.write('*');
+					}
+			document.write('<br />');
+			}
+
+		  var rows=5;
+			for(var i=10; i > 0; i=i-2)
+			{
+				for(var j=10; j<=i; j=j-2)
+				{
+				document.write('*');
+				}
+			document.write('<br />');
+			}
+
+				//9 b Print star patterns
+		 var rows=5;
+			for(var i=10; i > 0; i=i-2)
+			{
+				for(var j=5; j<=i; j=j-2)
+				{
+				document.write('*');
+				}
+			document.write('<br />');
+			}
+		 
+		 var rows=5;
+			for(var i=1; i <= 10; i=i+2)
+			{
+				for(var j=1; j<=i; j=j+2)
+					{
+					document.write('*');
+					}
+			document.write('<br />');
+			}
+
+		  
+    
+	
+
+		//10 Check whether an input text is a palindrome or not
+		s = prompt ("Ingrese una palabra: ", "Palabra");
+		function isPalindrome(s) {
+		 var len = s.length;
+			// definition clauses 1. and 2.
+		if (len < 2) {
+		 return true;
+		}
+		// note: len >= 2
+		// definition clause 3.
+		 if (s[0] != s[len - 1]) {
+       document.write("It is not");
+		}
+		// note: string is of form s = 'a' + t + 'a'
+		 // note: s.length >= 2 implies t.length >= 0
+		var t = s.substr(1, len - 2);
+			document.write("It is");
+}
+
+
+
+
+		
+		/*
+		alert("Bienvenido " + nombre);
+		console.log(nombre);
+
+		var x=5;
+		var y=2;
+
+		var s=x+y;
+		var r=x-y;
+
+		console.log("La suma es de: "+s);
+		console.log("La resta es de: "+r);
+		
+		var d=x/y;
+		var multp=x*y;
+
+		console.log("La division es de:"+d);
+
+
+		if(respuesta>5){
+			alert("Buen trabajo");
+			if(respuesta==6){
+				alert("El numero es igual a 6");
+			}
+			else{
+				alert("El numero no es 6");
+			}
+			else{
+				alert("No es un numero mayor a 5");
+			}
+		}
+
+		//SWITCH
+		var respuesta=prompt("Ingrese un numero del 1 al 3");
+
+		switch(respuesta){
+			case "1":
+				alert("Usted escribio el numero uno");
+				break;
+
+			case "2":
+				alert("Usted escribio el numero uno");
+				break;
+
+			case "3":
+				alert("Usted escribio el numero uno");
+				break;
+			
+			default: 
+				alert("No es un numero entre 1 y 3");
+		}
+		//Bucle for -- Estructura de control iterativa
+		// inicializando 
+
+		//Bucle while
+		var i=0;
+
+		while(i<10){
+			document.write("Numero:" + i + "<br>");
+			i++;
+		}
+
+		// Arreglos -- Array
+		var dias=["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"];
+			for (i=0; i<7; i++){ 
+				console.log(dias[i]);
+			}
+
+		//FUNCIONES O METODOS PARA Arreglos
+		var grupo1=["A", "B", "C"];
+		var grupo1=["D", "E", "F"];
+		var grupoA,grupoB,vuelta;
+
+		grupoA=grupo1.concat(grupo2)
+		console.log(grupoA);
+
+		grupoB=grupoA.join("-");
+		console.log(grupoB);
+
+		grupoA.pop(); //Elimina el ultimo elemento
+		console.log(grupoA);
+
+		grupoA.push("G"); //Agrega en la ultima posicion
+		console.log(grupoA);
+
+		grupoA.shift(); //Elimina en la primer posicion
+		console.log(grupoA);
+
+		grupoA.unshift("Z"); //Agrega en la primera posicion
+		console.log(grupoA);
+
+		vuelta=grupoA.reverse(); //Invierte el orden del array
+		console.log(vuelta);
+
+
+		//FUNCIONES DE CADENA
+		var cadena=prompt("Ingrese una palabra o una frase"); 
+
+		alert("Longitud de cadena: "+cadena.length);
+		alert("Mayusculas: "+cadena.toUpperCase());
+		alert("Minusculas: "+cadena.toLowerCase());
+		alert("Posicion 1: "+cadena.charAt(1));
+
+		var cadena=prompt("Escriba caracter a buscar"); 
+		alert("Posicion de letra: "+cadena.indexOf(caracter));
+		alert("Posicion ultima letra: "+cadena.lastIndexOf(caracter));
+		alert("Porcion: "+cadena.substr(1, (cadena.length)-1));
+		console.log(cadena.split(""));
+
+		alert("Porcion: "+cadena.substr(-1*(cadena.length),7)); 
+
+
+		(function(){
+			function saludo(){
+		//alert("Hola");
+		console.log("Hola");
+		};
+
+		// Cumple la funcion cuando se cumpla el tiempo indicado
+		setTimeout(saludo, 2000);
+
+		// Cumple funcion de manera ciclica cada vez que cumple el tiempo
+		//setInterval(saludo, 2000);
+
+		}())
+
+
+		(function(){
+			var cont = 0;
+			function saludo(){
+			cont++;
+		    //console.log("Hola");
+			document.write(cont+"<br>")
+
+			if(cont === 5){
+				clearInterval(intervalo);
+			}
+		}
+
+		var intervalo = setInterval(saludo, 2000);
+
+		}())
+
+		
+
+		//Fechas
+		// al no devolver un parametro, tomara la fecha actual del pc
+
+		var fecha = new Date();
+		document.write(fecha.getHours()+ "<br>");
+		document.write(fecha.getMinutes()+ "<br>");
+		document.write(fecha.getSeconds()+ "<br>");
+		document.write(fecha.getDay()+ "<br>");
+		document.write(fecha.getDate()+ "<br>");
+		document.write(fecha.getMonth()+ "<br>");
+		document.write(fecha.getFullYear());  
+
+		<p id="result"> gola </p>
+		//Almacena datos sin fecha de caducidad Minimo 5MB de memoria del navegador
+		//Comprobar si el navegador soporta localStorage
+		if(typeof(Storage)  !=="undefined"){
+		alert("Soporta exitosamente")
+
+		//Crear un elemento
+		localStorage.setItem("nombre", "BIT")
+
+		//Consultar un elemento
+		alert(localStorage.getItem("nombre"))
+		document.getElementById("result").innerHTML += localStorage.getItem("nombre")
+
+		//Eliminar un elemento
+		alert(localStorage.removeItem("nombre"))
+		}else}
+
+		alert("NO soporta localStorage")
+		} */
+
+		</script>   
+</head>
+<body>
+
+	<script> 
+		
+		/*
+		//Almacena datos sin fecha de caducidad Minimo 5MB de memoria del navegador
+		//Comprobar si el navegador soporta localStorage
+		if(typeof(Storage)  !=="undefined"){
+		alert("Soporta exitosamente")
+
+		//Crear un elemento
+		localStorage.setItem("nombre", "BIT")
+
+		//Consultar un elemento
+		alert(localStorage.getItem("nombre"))
+		document.getElementById("result").innerHTML += localStorage.getItem("nombre")
+
+		//Eliminar un elemento
+		alert(localStorage.removeItem("nombre"))
+		}else{
+
+			alert("NO soporta localStorage")
+		}
+		
+
+
+		document.cookie = "usuario = BIT;"
+
+		//leer cookie
+		var infoCookie = document.cookie
+		alert(infoCookie)
+
+		//Modificar cookie
+		document.cookie = "usuario = Bogota Institute of Technology;" //Modificando una cookie
+		alert(document.cookie)
+
+		//Eliminar cookie
+		document.cookie = "usuario =;" expires = Thu 01 Jan 1970 00:00:01 UTC;"
+		alert(document.cookie)
+		*/
+
+		</script>
+
+</body>
+</html>

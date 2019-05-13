@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button id="boton">Boton</button>
+    <input type="text" id="texto"/>
+
+    <script>
+        function validar(){
+            var recogerDato = document.getElementById("texto").value            
+
+            //Caracter especial
+            // \ -> permite escapar (interpretar) un caracter especial como lo puede ser * de manera literal
+            //          ej /a\*r/  ca*rmen - a*rpa - a*rma
+            // ^ -> inicio de búsqueda en el patrón 
+            // $ -> final de búsqueda en el patrón
+            // + -> busca la repetición de 1 o mas veces del patrón que antecede un caracter
+            // () -> paréntesis de captura, permiten indicar un subpatrón que será recordado
+            // [] -> indican agrupación de caracteres sin importar su orden ej /[a-d]/ = abcd
+            // {} -> n veces exactas en que se repite el patrón ej /a{2}/ aa
+            // {,} -> minimo n veces en que se repite el patrón en adelante
+            //          ej /a{2,}/ aa - aaa - aaaa
+            // {,} -> minimo n veces en que se repite el patrón hasta m veces
+            //          ej /a{1,4}/ a - aa - aaa - aaaa -aaaaa
+            // \d -> busca un dígito en un grupo de caracteres ej /[a-z]\d/  bictia123
+            // \D -> busca aquello que no sea un dígito
+            // \W -> busca caracteres especiales ej /[a-z]\W/  bictia.bogota -- bictia#bogota -- bictia@bogota
+            // \s -> busca espacios ej /[a-z]\s/  bictia bogota -- 
+            //  Siempre se define por medio del slash / patrón /
+            //var rep = new RegExp(/a+/)
+            if(/ /.test(recogerDato)){
+                alert("Bienvenido " + recogerDato)
+            } else{
+                alert("Inválido")
+            }
+            
+            
+        }
+
+        
+        
+
+        var boton = document.getElementById("boton")
+        boton.addEventListener("click", validar)
+    </script>
+</body>
+</html>

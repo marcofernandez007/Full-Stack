@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario Expresiones regulares y WEB Storage</title>
+    <script>
+        function validarFormulario() {
+
+            var name = document.getElementById('name').value;
+            var password = document.getElementById('password').value;
+
+            //Test campo obligatorio
+            if (name == null || name.length == 0 || /^[0-9\s]*$/.test(name)) {
+                alert('ERROR: El campo nombre no debe ir vacío, no espacios en blanco y solamente letras');
+                return false;
+            }
+
+            //Test edad
+            if (password == null || password.length == 0 || /^\s+$/.test(password)) {
+                alert('ERROR: Debe ingresar password, sin espacios en blanco');
+                return false;
+            }
+
+            var inputUsername = document.getElementById("name");
+            var inputPassword = document.getElementById("password");
+            localStorage.setItem("username", inputUsername.value);
+            localStorage.setItem("password", inputPassword.value);
+        }
+
+
+        function login(theForm) {
+            document.getElementById('welcomeMessage').innerHTML = "";
+            var inputUsername = theForm["userValida"];
+            var inputPassword = theForm["passwordValida"];
+            var username = inputUsername.value;
+            var password = inputPassword.value;
+
+
+            if ((username == localStorage.getItem("username")) && (password == localStorage.getItem("password"))) {
+                document.getElementById('welcomeMessage').innerHTML = "Bienvenido " + localStorage.getItem('username') +
+                    "!";
+            } else {
+                document.getElementById('welcomeMessage').innerHTML = "Ingreso Invalido! " + username + password;
+            }
+
+            return false;
+        } // end login()
+    </script>
+</head>
+
+<body>
+    <p>11.Realizar un formulario donde sus campos se validen con Expresiones Regulares. Una vez se valide, se deben
+        guardar los
+        datos en una cookie para posteriormente validar un inicio de sesión del Usuario por medio de Web Storage. </p>
+    <hr>
+    <h2>Ingreso datos para almacenar</h2>
+    <form id="form" action="" method=" get" onsubmit="return validarFormulario()">
+        <p>
+            Nombre: <input type="text" id="name" />
+
+            Clave: <input type="password" id="password" />
+            <br />
+            <input type="submit" value="Enviar" />
+        </p>
+    </form>
+    <hr>
+    <h2>Ingreso datos validar</h2>
+    <div id="nombreUsuario"></div>
+    <div id="passwordUsuario"></div>
+    <div id="welcomeMessage"></div>
+    <form method="get" action="" onsubmit="return login(this);" id="signon">
+        <p>
+            Nombre: <input type="text" id="userValida" />
+
+            Clave: <input type="password" id="passwordValida" />
+            <br />
+            <input type="submit" value="Enviar" />
+        </p>
+    </form>
+    <script>
+        document.getElementById("nombreUsuario").innerHTML = 'Usuario: ' + localStorage.getItem("username");
+        document.getElementById("passwordUsuario").innerHTML = 'Password: ' + localStorage.getItem("password");
+    </script>
+</body>
+
+</html>

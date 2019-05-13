@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+
+<html lang="es-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>JuevesSemana2</title>
+</head>
+<body 
+<div>
+	<h1>Hola DOM </h1>
+</div>
+
+<div id="prueba">
+	<p>Uno</p>
+	<div id="second">Dos</p>
+	<p>Tres</p>
+</div>
+
+<div>	
+	<p>Cuatro</p>
+	<p>Cinco</p>
+</div>
+
+<script>
+
+	//Crear un nodo
+	// 1. Crear el elemento -> Que etiqueta vamos a Crear
+	var elemento = document.createElement("h2");
+	// 2. Crear nodo de texto -> Contenido de la etiqueta creada anteriormente
+	var contenido = document.createTextNode("Soy Nuevo");
+	// 3. Agregar el texto al nodo
+	elemento.appendChild(contenido);
+	document.getElementById("prueba").appendChild(elemento);
+
+	//Posicionar un nodo
+	var padre = document.getElementByTagName("p")[0].parentNode;
+	var hijo1 = document.getElementByTagName("p")[2];
+
+	//padre.intertarAntes(nuevo, referencia)
+	padre.insertBefore(elemento, hijo1);
+
+	//Reemplazar contenido de un nodo
+	elemento.innerHTML="Querido <i>Pepe</i>";
+	//elemento.textContent="Querido <i>Pepe</i>";
+
+	//Eliminar nodo
+	padre.removeChild(elemento);
+
+	/*
+	Pedir al usuario que ingrese x cantidad de datos
+	El usuario solo debe ingresar numeros o un caracter
+	Ordenar de mayor a menor iniciando por los caracteres
+	Cada dato debe ser impreso en un nuevo div>
+
+	*/
+	 var salir = "";
+        var entrada ="";
+        var arrayNum = [];
+        var arrayLet = [];
+        var j=0;
+        var k=0;
+
+		//Cast the strings to numbers for the sorting to work
+        for(i=0;i<10;i++){
+            entrada= prompt("ingrese");
+            if(entrada==" "){
+                break
+            }
+            if(Number.isInteger(parseInt(entrada))){
+                           
+                arrayNum[j]=entrada;
+                j++;
+            }else{               
+              
+                arrayLet[k]= entrada;  
+                k++;
+            }
+        }
+
+        // order 
+        arrayNum.sort();
+        arrayLet.sort();
+
+        var arrayTotal = [];
+        arrayTotal = arrayLet.concat(arrayNum);
+        console.log(arrayTotal);
+
+        for(i=0;i<arrayTotal.length;i++){
+            var elemento = document.createElement("div");
+            elemento.innerHTML = arrayTotal[i];
+            document.getElementById('prueba').appendChild(elemento);
+        }
+    
+	</script>
+
+</body>
+</html>
