@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Nosotros</title>
+    <link rel="stylesheet" href="css/grid/gridRecomendados.css" type="text/css"/>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <style>
+    .princialM{width:350px;height: 250px;}
+    .colorG{
+            background-color:#145374;  
+            border:5px,solid; 
+            color:white;
+            border-top:10px;
+            text-align: justify;
+            margin: auto;
+            width:73%;
+            size:16px;
+            }
+    .Pat{overflow: hidden;
+        float: left;
+        width:33.33%;
+    }
+
+    .centrado{
+        border-radius:12px;
+        width: 80%;
+        background-color:#145374;  
+        border:5px,solid; 
+        color:white;
+        margin-left: 10%;
+
+    }    
+    </style>
+</head>
+
+<body id="bodyCG">
+    <div id="principal">
+        <header id="cabecera">Cabecera</header>
+        <br>
+
+        </div>
+        <div id="sliderPrincipal">
+        
+        <div class="colorG">
+        <br>    
+        <div class="centrado">
+        <h1>¿Quiénes Somos?</h1>
+        <br>
+        <p>Somos un equipo multidisciplinario de profesionales que deseamos promover la cultura nórdica. </p>
+        <br>
+        <p>Promocionamos la lectura y el benestar social por medio de ofrecer un espacio abierto, nuestra LIBRERIA THOR, donde sin importar la edad ni el género, encontrarás los libros que buscas </p>
+        <br>
+        <P>En nuestra librería puedes encontrar espacios acogedores para leer tus libros preferidos.</P>
+        <br>
+        <p>Adicionalmente, contamos con tecnología de punta en libros virtuales, e-books, pantallas touch para leer varios libros y  sitios web en simultánea</p>
+        </div>
+       
+        <br>
+        <div>
+          <br>  
+        <div class="Pat ancho"><img class="princialM"src="./media/AusDigital.png"></div>
+        <div class="Pat ancho"><img class="princialM"src="./media/VirtualLibrary.png"></div>
+        <div class="ancho2 Pat"><img class="princialM"src="./media/AusLibreria.png"></div>
+        
+         </div>
+    </div>
+
+
+        </div>
+        <footer id="pieDePagina">Pie De Pagina</footer>
+    </div>
+    <script>
+            $(document).ready(function(){
+            $("#cabecera").load("./header.html");
+            // $("#sliderPrincipal").load("./formulario.html");
+            $("#pieDePagina").load("./footer.html");
+            // $(".btnArriba").load("BotonArriba.html")
+        });
+
+
+          
+    
+
+    </script>
+</body>
+
+</html>

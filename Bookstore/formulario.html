@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Muli|Oswald&display=swap" rel="stylesheet">
+    <script src="jquery-3.4.1.min.js"></script>
+    <title>Libreria Odin</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body{
+            /* width: 100%; */
+            /* height: 100%; */
+            background-color: #B9D3E5;
+            font-family: Oswald;
+            letter-spacing: .5px;    
+        }
+
+        .generalFormDiv{
+            width: 100%;
+            margin: auto;
+            padding: 20px;
+            height: auto;
+            background-image: url("./media/captura.jpg");
+            background-size: contain;
+            /* margin-bottom: 80px; */
+        }
+
+        .formDiv{
+            border-radius: 5px;
+            height: 450px;
+            width: 30%;
+            border: 1px solid black;
+            background-color: rgba(185, 211, 229, 0.623);
+            margin-left: 15%;
+            margin-top: 50px;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .contenidoFormDiv{
+            width: 100%;
+            height: 90%;
+            background-color: #f5e5cd;
+
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        .contenidoFormDiv input[type="text"], input[type="password"]{
+            width: 90%;
+            border: none;
+            margin: 5px 10px;
+            padding: 3px;
+            height: 20px;
+        }
+
+        .contenidoFormDiv input[type="text"]:nth-child(1){
+            margin-top: 40px;
+        }
+
+        .contenidoFormDiv button{
+            width: 95%;
+            padding: 5px;
+            margin: auto;
+            background-color: #FE938C;
+            border: none;
+            font-weight: bold;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .contenidoFormDiv[type="checkbox"]{
+            display: inline-block;
+        }
+
+        .contenedorForm{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        @media (max-width: 700px){
+            .formDiv{
+                min-width: 50%;
+                min-height: 400px;
+                padding: 6px;
+            }
+
+            .generalFormDiv{
+                padding: 5px 20px;
+            }
+
+            .generalFormDiv{
+                background-size: cover;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header class="Head"></header>
+    <div class="btnArriba"></div>
+    <div class="generalFormDiv">
+
+        <div class="formDiv">
+            <h3 style="text-align: center">Registrate y Recibe Beneficios</h3>
+            <div class="contenidoFormDiv">
+                <input type="text" placeholder="Nombre & Apellido" id="nombre">
+                <input type="text" placeholder="Usuario" id="usuario">
+                <input type="text" placeholder="Cedula" id="cedula">
+                <input type="text" placeholder="Celular" id="celular">
+                <input type="text" placeholder="Correo Electronico" id="correo">
+                <input type="password" placeholder="Contraseña" id="contraseña">
+                <input type="password" placeholder="Confirmar Contraseña" id="confirmar-contraseña">
+                <div class="contenedorForm">
+                    <input type="checkbox" name="" id="checkeo"><p>He leido los Termino y Condiciones</p>
+                </div>
+                <button onclick="validar()">REGISTRATE</button>
+            </div>
+        </div>
+    </div>
+    <footer class="Footer"></footer>
+
+    <script>
+
+  
+$(document).ready(function(){
+            // $(".Head").load("Header.html");
+            // $(".Footer").load("Footer.html");
+            // $(".btnArriba").load("BotonArriba.html")
+            nuevoUser = localStorage.getItem("UsuarioLog");
+            analisis();
+        });
+        
+        function validar(){
+    var nombre = document.getElementById('nombre').value.toLowerCase();
+    var usuarios = document.getElementById('usuario').value.toLowerCase();
+    var cedula = document.getElementById('cedula').value;
+    var correo = document.getElementById('correo').value.toLowerCase();
+    var celular = document.getElementById('celular').value;
+    var contraseña = document.getElementById('contraseña').value.toLowerCase();
+    var confirmarContraseña = document.getElementById('confirmar-contraseña').value.toLowerCase();
+    var check = document.getElementById("checkeo").checked;
+    var puntos = 0;
+
+    if (nombre=="" && cedula=='' || /[a-zA-Z]/g.test(cedula)){
+        alert("Datos invalidos \n Favor ingrese correctamente los datos");
+    } else{
+        puntos+=2;
+    }
+
+    if (usuarios == ""){
+        alert("Datos invalidos \n Favor ingrese correctamente los datos");
+    } else {
+        switch(localStorage.getItem(usuarios)){
+            case null:
+                puntos++;
+            break;
+            default:
+                alert("Usuario Existente")
+            break;
+        }
+    }
+
+
+    if (celular=='' || /[a-zA-Z]/g.test(celular)){
+        alert("Datos invalidos \n Favor ingrese un celular Valido");
+    } else{
+        puntos++;
+    }
+    
+    if (/^\W/.test(correo) || /\W$/.test(correo) || /[á,é,í,ó,ú,\s]/.test(correo) || /\W@/.test(correo) || /@\W/.test(correo) || /@\d/.test(correo) || !/\.[a-zA-Z]/.test(correo) || !/@/.test(correo) ||correo==""){
+        alert("Datos invalidos\n Ingrese Adecuadamente el Correo");
+        document.getElementById('correo').value = "";
+    } else{
+        puntos++;
+    }
+
+    if (contraseña=="" || /\s/g.test(contraseña)){
+        alert("Datos invalidos\n Por favor Ingrese una Contraseña valida");
+    } else if(contraseña == confirmarContraseña){
+        puntos++;
+    } else{
+        console.log("Sucessfull")
+        alert("Las contraseñas no coinciden");
+    }
+
+    
+    if(check){
+        puntos++;
+    } else {
+        alert("Debes seleccionar los Termino y Condiciones")
+    }
+    console.log(puntos)
+
+    if (puntos==7){
+        localStorage.setItem("estado", "activo");
+        localStorage.setItem("Nombre", nombre);
+        localStorage.setItem("User", usuarios);
+        localStorage.setItem(usuarios, contraseña)
+        localStorage.setItem("Contraseña", contraseña);
+
+        var usuarioLabel = document.getElementById('userState');
+        localStorage.setItem("UsuarioLog", usuarios.toUpperCase());
+
+        $("#userState").animate({height: "0px"}, 400);
+
+        nuevoUser = localStorage.getItem("UsuarioLog")
+
+        function actualizarUsuario(){
+            document.getElementById('userState').innerHTML="<p>"+ nuevoUser + "<img src='https://img.icons8.com/metro/26/000000/online.png' width='13%'>" +"</p>";
+            document.getElementById('userLogin').innerHTML="<img src='./media/icons/login.png' alt='' width='20px' onclick='analisisCierre()' title='Log Out' style='cursor: pointer'>";
+            window.location.href = "./"
+             $("#userState").animate({height: "30px"});
+             $("#userLogin").animate({height: "30px"});
+        }
+        setTimeout(actualizarUsuario, 400);
+        document.getElementById('registroForm').reset();
+
+    }
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Detalles del Libro</title>
+    <link rel="stylesheet" href="css/grid/gridRecomendados.css" type="text/css"/>
+    <link rel="stylesheet" href="css/libros.css" type="text/css"/>
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body id="bodyCG">
+    <div id="principal">
+        <header id="cabecera">Cabecera</header>
+        <div id="sliderPrincipal">
+            <!-- aquí va la información -->
+            
+            <!-- aquí va la información -->
+        </div>
+        <footer id="pieDePagina">Pie De Pagina</footer>
+    </div>
+    <div class="btnArriba"></div>
+    <script>
+        function g_desplazar() {
+            var elmnt = document.getElementById("g_resumen");
+            elmnt.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#cabecera").load("./header.html");
+            // $("#sliderPrincipal").load("./formulario.html");
+            $("#pieDePagina").load("./footer.html");
+            $(".btnArriba").load("./botonarriba.html");
+        });
+    </script>
+</body>
+
+</html>

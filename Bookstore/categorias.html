@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Categorías</title>
+    <link rel="stylesheet" href="css/grid/gridRecomendados.css" type="text/css"/>
+    <link rel="stylesheet" href="css/categorias.css" type="text/css"/>
+    <link rel="stylesheet" href="css/w3.css" type="text/css"/>
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body id="bodyCG">
+    <div id="principal">
+        <header id="cabecera">Cabecera</header>
+        <div id="sliderPrincipal">
+
+            <div id="myBtnContainer"> 
+                <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                <button class="btn" onclick="filterSelection('artes')"> Artes</button>
+                <button class="btn" onclick="filterSelection('ciencias')"> Ciencias y Salud</button>
+                <button class="btn" onclick="filterSelection('diseño')"> Diseño</button>
+                <button class="btn" onclick="filterSelection('gastronomia')"> Gastronomía</button>
+                <button class="btn" onclick="filterSelection('literatura')"> Literatura</button>
+            </div>
+
+            <div class="containerFilter">
+                <div class="filterDiv artes"> 
+                    <a href="./lib.arte2.html"> <img class="libcateg" src="./libros/ImagenesEditadas/arte2.png"/><br>Palabra de cineasta</a>
+                </div>
+                <div class="filterDiv literatura">  
+                    <a href="./libLit1.html"> <img class="libcateg" src="./libros/ImagenesEditadas/Lit1.jpg"><br>    Recordar Contraseña </a>
+                </div>
+                <div class="filterDiv diseño">
+                    <a href="./libDis1.html"> <img  class="libcateg" src="./libros/ImagenesEditadas/Dis1.jpg"> <br>Diseño Grafico y Pensamiento Visual      </a>  
+                </div>
+                <div class="filterDiv artes">
+                    <a href="./lib.arte1.html"><img class="libcateg"  src="./libros/ImagenesEditadas/arte1.jpg"><br>      Dialogos de Roma</a>
+                </div>  
+                <div class="filterDiv gastronomia">
+                    <a href="./lib.Gasuno.html"> <img class="libcateg"  src="./libros/ImagenesEditadas/Gas1.jpg"><br>      Modernist cuisine </a>
+                </div>
+                <div class="filterDiv literatura">
+                    <a href="./libLit2.html"><img class="libcateg"  src="./libros/ImagenesEditadas/Lit2.jpg"><br>      Tormenta de Espadas </a>
+                </div>
+                <div class="filterDiv ciencias">
+                    <a href="./libciencia5.html"><img class="libcateg"  src="./libros/ImagenesEditadas/ciencia5.jpg"><br>    El Gran Cuadro</a>
+                </div>
+                <div class="filterDiv gastronomia">
+                    <a href="./libGasdos.html"><img class="libcateg"  src="./libros/ImagenesEditadas/Gas2.jpg"><br>      El Celler de Can Roca </a>
+                </div>
+                <div class="filterDiv ciencias">
+                    <a href="./libciencia1.html"><img class="libcateg"  src="./libros/ImagenesEditadas/ciencia1.jpg"><br>      El Mundo y sus Demoníos</a>
+                </div>
+                <div class="filterDiv artes">
+                    <a href="./lib.arte4.html"> <img class="libcateg"  src="./libros/ImagenesEditadas/arte4.jpg"><br>      Los Bandidos</a>
+                </div>
+                <div class="filterDiv literatura">
+                    <a href="./libLit3.html">  <img class="libcateg"  src="./libros/ImagenesEditadas/Lit3.jpg"><br>      Choque de Reyes </a>
+                </div>
+                <div class="filterDiv ciencias">
+                    <a href="./libciencia2.html"> <img class="libcateg"  src="./libros/ImagenesEditadas/ciencia2.jpg"><br>      Breves Respuestas a las Grandes Preguntas</a>
+                </div>
+                <div class="filterDiv gastronomia">
+                    <a href="./libGastres.html">  <img class="libcateg" src="./libros/ImagenesEditadas/Gas3.jpg"><br>      Bocuse </a>
+                </div>
+                <div class="filterDiv diseño">
+                    <a href="./libDis2.html">  <img class="libcateg" src="./libros/ImagenesEditadas/Dis2.jpg"><br>      Story Telling (Como Estrategia de Comuinicacion </a>
+                </div>
+                <div class="filterDiv  ciencias">
+                    <a href="./libciencia3.html">  <img class="libcateg" src="./libros/ImagenesEditadas/ciencia3.jpg"><br>      La Chispa Creativa</a>
+                </div>
+                <div class="filterDiv diseño">
+                    <a href="./libDis3.html"> <img class="libcateg" src="./libros/ImagenesEditadas/Dis3.jpg"><br>      El diseño como Storyteling </a>
+                </div>
+                <div class="filterDiv gastronomia">
+                    <a href="./lib.Gascuatro.html"> <img class="libcateg"  src="./libros/ImagenesEditadas/Gas4.jpg"><br>      The Professional Chef </a>
+                </div>
+                <div class="filterDiv literatura">
+                    <a href="./libLit4.html">  <img class="libcateg" src="./libros/ImagenesEditadas/Lit4.jpg"><br>      Juego de Tronos </a>
+                </div>
+                <div class="filterDiv artes">
+                    <a href="./lib.arte5.html"> <img class="libcateg" src="./libros/ImagenesEditadas/arte5.png"><br>      Tragedias Completas</a>
+                </div>
+                <div class="filterDiv diseño">
+                    <a href="./libDis4.html"> <img class="libcateg" src="./libros/ImagenesEditadas/Dis4.jpg"><br>      historias que marcan </a>
+                </div>
+                <div class="filterDiv gastronomia">
+                    <a href="./lib.Gascinco.html"> <img class="libcateg" src="./libros/ImagenesEditadas/Gas5.jpg"><br>    LaRouse </a>
+                </div>
+                <div class="filterDiv ciencias">
+                    <a href="./libciencia4.html"> <img class="libcateg" src="./libros/ImagenesEditadas/ciencia4.jpg"><br>      El Nacimiento de la Especie</a>
+                </div>  
+                <div class="filterDiv literatura">
+                    <a href="./libLit5.html"> <img class="libcateg" src="./libros/ImagenesEditadas/Lit5.jpg"><br>      El Mundo Azul Ama el Caos </a>
+                </div>
+                <div class="filterDiv diseño">
+                    <a href="./libDis5.html">  <img class="libcateg" src="./libros/ImagenesEditadas/Dis5.jpg"><br>  Diseño Gráfico Nuevos Fundamentos</a>
+                </div>
+            </div>
+        </div>
+        <footer id="pieDePagina">Pie De Pagina</footer>
+    </div>
+    <div class="btnArriba"></div>
+    <script src="js/categorias.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#cabecera").load("./header.html");
+            $("#pieDePagina").load("./footer.html");
+            $(".btnArriba").load("./botonarriba.html");
+        });
+    </script>
+</body>
+
+</html>

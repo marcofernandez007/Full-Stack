@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <title>Slider Manual </title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <style>
+   * {
+     margin: 0%;
+     padding: 0%;
+     margin-top: 2%;
+   }
+
+   .mySlides3 {
+     display: none;
+     margin: auto;
+   }
+
+   .row {
+     overflow: auto;
+   }
+
+   .col {
+     float: left;
+   }
+
+   .uno {
+     width: 100%;
+   }
+
+   .dos {
+     width: 25%;
+   }
+
+   .tres {
+     width: 90%;
+   }
+
+   .button {
+     text-align: center;
+   }
+   .boton{
+     margin-top: 15%;
+   }
+ </style>
+</head>
+
+<body>
+  <div style="overflow: hidden;" class="w3-content w3-display-container uno">
+    <div class="tres mySlides3">
+      <div><button class="boton w3-button w3-black w3-display-left button" onclick="plusdivs2(-1)">&#10094;</button></div>
+      <div class="dos col "> <a href="https://www.youtube.com/">
+        <img src="C:\Users\Fernanda\Desktop\FULLSTACKnuevo\img_arte-ciencia/ciencia1.jpg" width ="250px" height="250px"> </a>
+      </div>
+      <div class="dos col"> <a href="https://www.youtube.com/">  
+        <img src="C:\Users\Fernanda\Desktop\FULLSTACKnuevo\img_arte-ciencia/ciencia2.jpg" width ="250px" height="250px"> </a>
+      </div>
+      <div class="dos col"> <a href="https://www.youtube.com/">
+        <img src="C:\Users\Fernanda\Desktop\FULLSTACKnuevo\img_arte-ciencia/ciencia3.jpg" width="250px" height="250px"> </a>
+      </div>
+      <div class="dos col"><a href="https://www.youtube.com/">
+        <img src="C:\Users\Fernanda\Desktop\FULLSTACKnuevo\img_arte-ciencia/ciencia4.jpg" width="250px" height="250px"> </a>
+      </div>
+      <div><button class="boton w3-button w3-black w3-display-right" onclick="plusdivs2(1)">&#10095;</button> 
+      </div>
+ 
+    </div>
+ 
+ 
+    <div class="tres mySlides3">
+      <div><button class="boton w3-button w3-black w3-display-left button" onclick="plusdivs2(-1)">&#10094;</button></div>
+      <div class="dos col "> <a href="https://www.youtube.com/">
+        <img src="C:\Users\Fernanda\Desktop\FULLSTACKnuevo\img_arte-ciencia/dis1.jpg" width="250px" height="250px"> </a>
+      </div>
+      <div class="dos col"><a href="https://www.youtube.com/">
+        <img src="C:\Users\Fernanda\Desktop\FULLSTACKnuevo\img_arte-ciencia/Dis2.jpg" width="250px" height="250px"> </a>
+      </div>
+      <div class="dos col"><a href="https://www.youtube.com/">
+        <img src="C:\Users\Fernanda\Desktop\FULLSTACKnuevo\img_arte-ciencia/Dis3.jpg" width="250px" height="250px"> </a>
+      </div>
+      <div class="dos col"><a href="https://www.youtube.com/">
+        <img src="C:\Users\Fernanda\Desktop\FULLSTACKnuevo\img_arte-ciencia/Dis4.jpg" width="250px" height="250px"> </a>
+      </div>
+      <div>
+        <button class="boton w3-button w3-black w3-display-right " onclick="plusdivs2(1)">&#10095;</button> 
+      </div>
+    </div>
+ 
+</div>
+
+ <script>
+   var slideIndex2 = 1;
+   showDivs2(slideIndex2);
+
+   function plusdivs2(n) {
+     showDivs2(slideIndex2 += n);
+   }
+
+   function showDivs2(n) {
+     var i;
+     var x = document.getElementsByClassName("mySlides3");
+
+     if (n > x.length) { slideIndex2 = 1 }
+     if (n < 1) { slideIndex2 = x.length }
+     for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+     }
+     x[slideIndex2 - 1].style.display = "block";
+   }
+ </script>
+
+</body>
+
+</html>
+

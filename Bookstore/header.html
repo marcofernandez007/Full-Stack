@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <!-- <script src="js/jquery-3.4.1.min.js"></script> -->
+   <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat|Muli|Oswald&display=swap" rel="stylesheet"> -->
+   <link rel="stylesheet" href="./css/header.css">
+   <link rel="stylesheet" href="./css/buscador.css">
+</head>
+<body>
+<div class="contenedorHead">
+   <div id="arriba">
+      <div id="headerLogo" onclick="window.location = '/'"><img src="./media/icons/open-book.png" alt="logo" width="60px" height="90%"></div>
+      <div class="Overlay">
+         <div class="contenidoOverlay">
+            <img src="./media/icons/error.png" alt="" width="20px" onclick="cerrarOverlay()">
+            
+            <input type="text" placeholder="Ingrese el Usuario" id="usuarios">
+            
+            <input type="password" placeholder="Ingrese su Contraseña" id="contraseña2">
+            
+            <button class="buttonLogin" onclick="analisis2()">INGRESA AHORA</button>
+         </div>
+      </div>
+      <!-- <section>
+         <input type="text" placeholder="Busqueda por libro o autor ">
+         <div ><img src="./media/icons/magnifier.png" alt="busqueda" width="40px"></div>
+      </section> -->
+      <div class="container" style="width: 49.4%;">
+         <div class="contenido-hero">
+            <form id="busqueda" class="formulario">
+               <div class="autocomplete" style="background-color: #f1f1f1;">
+                  <input class="u-full-width" type="text" placeholder="Busca el libro..." id="myInput">
+               </div>
+               <input type="submit" id="submit-buscador" class="submit-buscador">
+            </form>
+         </div>
+         <div id="informacion" style="position: absolute; width: 49%; z-index: 2; background-color: #f1f1f1; text-align: center;">
+            
+         </div>
+      </div>
+      <div class="userNuevo">
+         <img src="./media/icons/boss.png" alt="login">
+         <div id="userState">
+            <a onclick='abrirOverlay()'>LOG IN</a>
+         </div>
+         <div id="userLogin">
+            <a href='./registro.html'>REGISTRO</a>
+         </div>
+      </div>
+      <div id="menuCarrito"><img src="./media/icons/shopping-cart.png" alt="compras"width="40px"></div>
+   </div>
+   <div class="menu">
+      <div id="header">
+         <ul class="nav">
+            <a href="./recomendados.html"><li>Recomendados</li></a>
+            <a href="./categorias.html"><li>Categorías</li></a>
+            <a href="./throru.html"><li>Thor U  </li></a>
+            <a href="./nosotros.html"><li>¿Quiénes Somos?</li></a>
+         </ul>
+      </div>
+   </div>
+</div>
+
+<script src="./js/header.js"></script>
+<script src="./js/buscador.js"></script>
+</body>
+</html>

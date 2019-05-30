@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Detalles del Libro</title>
+    <link rel="stylesheet" href="css/grid/gridRecomendados.css" type="text/css"/>
+    <link rel="stylesheet" href="css/libros.css" type="text/css"/>
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body id="bodyCG">
+    <div id="principal">
+        <header id="cabecera">Cabecera</header>
+        <div id="sliderPrincipal">
+            <!-- aquí va la información -->
+            <div id="g_contenedor">
+                <div id="g_descripcion">
+                    <div id="g_imagen">
+                        <img src="ImagenesEditadas/Lit2.jpg" width="100%" height="100%">
+                    </div>
+                    <div id="g_titulo">
+                        <h2 style="text-align: center">Tormenta de espadas</h2>
+                        <p>Autor: George R.R. Martin</p>
+                        <div id="g_prod-desc" style="text-align: justify" onclick="g_desplazar()">
+                            ". Brutal y poética, conmovedora y cruel, la magia de Martin como la del mundo de Poniente, necesita apenas una pincelada para cautivar al lector, hacerlo reír y llorar, y conseguir que el asombro ceda paso a la más profunda admiración por la serie. «George R.R. Martin sigue elevando la fantasía épica a nuevos niveles de ingenio y elaboración.»  <i>(Ver más)</i>
+                        </div>
+                        <div id="g_prod_dato">
+                            <p>$53.200</p>
+                            <div id="g_cant">
+                                <label for="g_opcion">Cantidad:</label>
+                                <select name="g_opcion" id="g_opcion">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="g_comprar">
+                            <button id="btn-comprar" style="height: 50px; width: 100%">COMPRAR LIBRO</button>
+                        </div>
+                    </div>
+                </div>
+                <hr style="width: 90%">
+                <div id="g_resumen" style="width: 90%; margin: auto; text-align: justify">
+                    <h2>Resumen del Libro</h2>
+                    <p>Canción de hielo y fuego: Libro tercero La novela río más espectacular jamás escrita Las huestes de los fugaces reyes de Poniente, descompuestas en hordas, asuelan y esquilman una tierra castigada por la guerra e indefensa ante un invierno que se anuncia inusitadamente crudo. Las alianzas nacen y se desvanecen como volutas de humo bajo el viento helado del Norte. Ajena a las intrigas palaciegas e ignorante del auténtico peligro en ciernes, la Guardia de la Noche se ve desbordada por los salvajes. Y al otro lado del mundo, Daenerys Targaryen intenta reclutar en las Ciudades Libres un ejército con el que desembarcar en su tierra. Martin hace que lo imposible parezca sencillo. /Tormenta de espadas confirma Canción de hielo y fuego como un hito de la fantasía épica.</p>
+                </div> 
+                <div id="g_detalles" style="width: 90%; margin: auto">
+                    <h2>Detalles</h2>
+                    <table>
+                        <tr>
+                            <td>TEMATICA: </td>
+                            <td>Literatura</td>
+                        </tr>
+                        <tr>
+                            <td>ISBN/EAN: </td>
+                            <td> 9788416035076</td>
+                        </tr>
+                        <tr>
+                            <td>EDITORIAL: </td>
+                            <td>GIGAMESH</td>
+                        </tr>
+                        <tr>
+                            <td>PUBLICACION: </td>
+                            <td> Barcelona 2014  </td>
+                        </tr>
+                        <tr>
+                            <td>PAGINAS: </td>
+                            <td>1168 pag</td>
+                        </tr>
+                    </table>
+                    
+        
+                </div>
+        
+            </div>
+            <!-- aquí va la información -->
+        </div>
+        <footer id="pieDePagina">Pie De Pagina</footer>
+    </div>
+    <div class="btnArriba"></div>
+    <script>
+        function g_desplazar() {
+            var elmnt = document.getElementById("g_resumen");
+            elmnt.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#cabecera").load("./header.html");
+            // $("#sliderPrincipal").load("./formulario.html");
+            $("#pieDePagina").load("./footer.html");
+            $(".btnArriba").load("./botonarriba.html");
+        });
+    </script>
+</body>
+
+</html>

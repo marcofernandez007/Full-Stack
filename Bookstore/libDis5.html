@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Detalles del Libro</title>
+    <link rel="stylesheet" href="css/grid/gridRecomendados.css" type="text/css"/>
+    <link rel="stylesheet" href="css/libros.css" type="text/css"/>
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body id="bodyCG">
+    <div id="principal">
+        <header id="cabecera">Cabecera</header>
+        <div id="sliderPrincipal">
+            <!-- aquí va la información -->
+            <div id="g_contenedor">
+        <div id="g_descripcion">
+            <div id="g_imagen">
+                <img src="ImagenesEditadas/ciencia5.jpg" width="100%" height="100%">
+            </div>
+            <div id="g_titulo">
+                <h2 style="text-align: center">El gran cuadro</h2>
+                <p>Autor: SEAN CARROLL</p>
+                <div id="g_prod-desc" style="text-align: justify" onclick="g_desplazar()">
+                    . ¿Existen los amores de novela en estos tiempos? ¿Puede un hombre estar impregnado de pasión por
+                    una misma mujer, toda su vida?.<i>(Ver más)</i>
+                </div>
+                <div id="g_prod_dato">
+                    <p>$62.000</p>
+                    <div id="g_cant">
+                        <label for="g_opcion">Cantidad:</label>
+                        <select name="g_opcion" id="g_opcion">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="g_comprar">
+                    <button id="btn-comprar" style="height: 50px; width: 100%">COMPRAR LIBRO</button>
+                </div>
+            </div>
+        </div>
+        <hr style="width: 90%">
+        <div id="g_resumen" style="width: 90%; margin: auto; text-align: justify">
+            <h2>Resumen del Libro</h2>
+            <p> En la visita de Tommy y Tuppence Beresford a su vieja tí­a Ada en la residencia en la que reside, otra
+                residente, la señora Lockett, menciona un estofado de setas venenosas y la señora Lancaster habla de
+                "algo detrás de la chimenea". Tommy y Tuppence se ven atrapados en una inesperada aventura en la que
+                afloran una extraña herencia, una casa misteriosa, magia negra, una lápida desaparecida y en la que la
+                vida de Tuppence correrá serio peligro. Una nueva entrega de la pareja conocida como Matrimonio de
+                sabuesos, en la que Agatha Christie mezcla su habitual novela enigma con algunos temas relacionados con
+                el espionaje.
+            </p>
+        </div>
+        <div id="g_detalles" style="width: 90%; margin: auto">
+            <h2>Detalles</h2>
+            <table>
+                <tr>
+                    <td>TEMATICA: </td>
+                    <td> CIENCIA Y DIVULGACIÓN CIENTÍFICA</td>
+                </tr>
+                <tr>
+                    <td>ISBN: </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>EDITORIAL: </td>
+                    <td> Molino</td>
+                </tr>
+                <tr>
+                    <td>PUBLICACION: </td>
+                    <td>1968 </td>
+                </tr>
+                <tr>
+                    <td>PAGINAS: </td>
+                    <td>569</td>
+                </tr>
+            </table>
+
+
+        </div>
+
+    </div>
+            <!-- aquí va la información -->
+        </div>
+        <footer id="pieDePagina">Pie De Pagina</footer>
+    </div>
+    <div class="btnArriba"></div>
+    <script>
+        function g_desplazar() {
+            var elmnt = document.getElementById("g_resumen");
+            elmnt.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#cabecera").load("./header.html");
+            // $("#sliderPrincipal").load("./formulario.html");
+            $("#pieDePagina").load("./footer.html");
+            $(".btnArriba").load("./botonarriba.html");
+        });
+    </script>
+</body>
+
+</html>

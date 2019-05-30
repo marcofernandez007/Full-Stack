@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Detalles del Libro</title>
+    <link rel="stylesheet" href="css/grid/gridRecomendados.css" type="text/css"/>
+    <link rel="stylesheet" href="css/libros.css" type="text/css"/>
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body id="bodyCG">
+    <div id="principal">
+        <header id="cabecera">Cabecera</header>
+        <div id="sliderPrincipal">
+            <!-- aquí va la información -->
+            <body>
+                <div id="g_contenedor">
+                    <div id="g_descripcion">
+                        <div id="g_imagen">
+                            <!--Ima-->
+                            <img src="ImagenesEditadas/Gas2.jpg" width="100%" height="100%">
+                        </div>
+                        <div id="g_titulo">
+                            <h2 style="text-align: center">El Celler de Can Roca- El Libro</h2>
+                            <p>Autor:osep Maria Fonalleras</p>
+                            <div id="g_prod-desc" style="text-align: justify" onclick="g_desplazar()">
+                                "Un libro mucho más manejable, con todos los contenidos incluidos en el original e ilustrado a todo color" <i>(Ver más)</i>
+                            </div>
+                            <div id="g_prod_dato">
+                                <p>$59.000</p>
+                                <div id="g_cant">
+                                    <label for="g_opcion">Cantidad:</label>
+                                    <select name="g_opcion" id="g_opcion">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="g_comprar">
+                                <button id="btn-comprar" style="height: 50px; width: 100%">COMPRAR LIBRO</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="width: 90%">
+                    <div id="g_resumen" style="width: 90%; margin: auto; text-align: justify">
+                        <h2>El Celler de Can Roca- El Libro</h2>
+                        <p>Consiguieron vender más de 15000 ejemplares en su edición de lujo que llegó a ser traducida en cinco idiomas. Ahora puedes hacerte con una versión reducida imprescindible para comenzar tu biblioteca gastronómica. Un libro mucho más manejable,
+                            con todos los contenidos incluidos en el original e ilustrado a todo color. En él encontrarás 480 páginas llenas de historia de la gastronomía, procesos creativos en la cocina, casi 90 recetas y todos aquellos valores de los hermanos Roca
+                            que les encumbraron como el mejor restaurante del mundo.</p>
+                    </div>
+                    <div id="g_detalles" style="width: 90%; margin: auto">
+                        <h2>Detalles</h2>
+                        <table>
+                            <tr>
+                                <td>GASTRONOMIA: </td>
+                                <td>El Celler de Can Roca- El Libro</td>
+                            </tr>
+                            <tr>
+                                <td>ISBN: </td>
+                                <td>textoisbn</td>
+                            </tr>
+                            <tr>
+                                <td>EDITORIAL:EL LIBRO</td>
+                                <td>EL LIBRO</td>
+                            </tr>
+                            <tr>
+                                <td>PUBLICACION: </td>
+                                <td>Josep Maria Fonalleras: </td>
+                            </tr>
+                            <tr>
+                                <td>PAGINAS:245 </td>
+                                <td>245</td>
+                            </tr>
+                        </table>
+            
+            
+                    </div>
+            
+                </div>
+                <script>
+                    function g_desplazar() {
+                        var elmnt = document.getElementById("g_resumen");
+                        elmnt.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                </script>
+            </body>
+            <!-- aquí va la información -->
+        </div>
+        <footer id="pieDePagina">Pie De Pagina</footer>
+    </div>
+    <div class="btnArriba"></div>
+    <script>
+        function g_desplazar() {
+            var elmnt = document.getElementById("g_resumen");
+            elmnt.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#cabecera").load("./header.html");
+            // $("#sliderPrincipal").load("./formulario.html");
+            $("#pieDePagina").load("./footer.html");
+            $(".btnArriba").load("./botonarriba.html");
+        });
+    </script>
+</body>
+
+</html>

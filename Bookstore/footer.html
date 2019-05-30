@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .logo{
+            width: 35%;
+            height: 100%;
+            text-align: center;
+        }    
+        
+        .Footer{
+            height: auto;
+            overflow: hidden;
+            margin: auto;
+            box-sizing: border-box;
+        }
+        
+        .footerGris ul{
+            list-style: none;
+            padding: 7px;
+            border: 1px solid black;
+            background-color: #3C5475;
+            color: white;
+            letter-spacing: 2px;
+        }
+        
+        .footerGris{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .footerGris div{
+            margin: 20px 20px;
+        }
+        
+        .contenedorPadre{
+            background-image: url("./media/fondofooter.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+            padding: 3px;
+            color: black;
+            border-top: 3px solid #145374;
+            border-bottom: 1.5px solid #145374;
+            height: auto;
+            width: auto;
+        }
+        
+        .genericoFooter{
+            background-color: rgba(211, 211, 211, 0.4);
+            width: 90%;
+            height: 90%;
+            margin: auto;
+            vertical-align: middle;
+            border-radius: 20px;
+            padding: 15px;
+            
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        .footerRedes img{
+            margin: 0 7px;
+        }
+        
+        .privacidad{
+            margin: center;
+            border: black solid ;
+            justify-content: center;
+            color: white;
+            height: 40px;
+            width: 100%;
+            background-color: black;
+            
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .derechos{
+            width: 30%;
+        }
+        .terminos{
+            width: 20%;
+        }
+        
+        @media (max-width: 700px){
+            .genericoFooter{
+                flex-direction: column;
+            }
+            
+            .footerGris{
+                flex-direction: column;
+            }
+            
+            .footerGris div{
+                margin: 10px 10px;
+                max-width: 300px;
+            }
+            
+            .logo{
+                width: 40%;
+                height: 20%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+        <div class="Footer">
+                <div class="contenedorPadre">
+                    <div class="genericoFooter">
+                    <div class="logo">
+                        <img src="./media/icons/odin.png" alt="" height="80%">
+                        <div class="footerRedes">
+                            <img title="facebook" src="./media/icons/facebook.png" alt="" height="40px" width="50px" >
+                            <img title="Instagram" src="./media/icons/instagram.png" alt=""height="40px" width="50px">
+                            <img title="feed" src="./media/icons/youtube.png" alt=""  height="40px" width="50px">
+                            <img title="twitter" src="./media/icons/twitter.png" alt=""  height="40px" width="50px">
+                            <img title="Pinterest" src="./media/icons/pinterest.png" alt=""  height="40px" width="50px">
+                        </div>
+                    </div>
+                    <section class="footerGris">
+                        <div>
+                            <br>
+                            <br>
+                            <ul> <b> CASA THOR</b>
+                                <li>Avenida <b>calle 35 # 5-15</b> Bogota D.C</li>
+                                <li>+57 (1) 703 59 95</li>
+                                <li>comunicaciones@libreriathor.com.co</li>
+                            </ul>
+                            <br>
+                            <br>
+                            <ul> <b>HORARIO</b> <br>
+                                <li>Lunes a viernes: 7 am a 7 pm</li>
+                                <li>Sabados: 9 am a 4 pm</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <br>
+                            <br>
+                            <ul><b>THOR CALLE 40</b>
+                                <li>Carrera 11 No 85-52</li>
+                                <li>74567872</li>
+                                <li>comunicaciones@libreriathor.com.co</li>
+                            </ul>
+                        </div>
+
+                    </section>
+                </div>
+         
+                </div>
+                <div class="privacidad">
+                    <div class="derechos">Libreria Thor © 2019. <br> Todos los derechos reservados. </div>
+                    <div class="terminos">Terminos | Condiciones</div>
+                </div>
+            </div>
+</body>
+</html>

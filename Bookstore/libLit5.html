@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Detalles del Libro</title>
+    <link rel="stylesheet" href="css/grid/gridRecomendados.css" type="text/css"/>
+    <link rel="stylesheet" href="css/libros.css" type="text/css"/>
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body id="bodyCG">
+    <div id="principal">
+        <header id="cabecera">Cabecera</header>
+        <div id="sliderPrincipal">
+            <!-- aquí va la información -->
+            <div id="g_contenedor">
+                <div id="g_descripcion">
+                    <div id="g_imagen">
+                        <img src="ImagenesEditadas/Lit5.jpg" width="100%" height="100%">
+                    </div>
+                    <div id="g_titulo">
+                        <h2 style="text-align: center">El mundo azl ama tu caos</h2>
+                        <p>Autor: Albert Espinosa</p>
+                        <div id="g_prod-desc" style="text-align: justify" onclick="g_desplazar()">
+                            ".La crítica ha dicho:«El proverbio decía"conócete a ti mismo". Ni hablar, desconoce, prueba, crea, equivócate, porque no hay respuestas correctas, y ni siquiera los proverbios pueden decir lo que eres o lo que tienes que ser. Este es el motor deEl mundo azul. Ama tu caos.»La Razón«Albert Espinosa posee un estilo..."  <i>(Ver más)</i>
+                        </div>
+                        <div id="g_prod_dato">
+                            <p>$29.750</p>
+                            <div id="g_cant">
+                                <label for="g_opcion">Cantidad:</label>
+                                <select name="g_opcion" id="g_opcion">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="g_comprar">
+                            <button id="btn-comprar" style="height: 50px; width: 100%">COMPRAR LIBRO</button>
+                        </div>
+                    </div>
+                </div>
+                <hr style="width: 90%">
+                <div id="g_resumen" style="width: 90%; margin: auto; text-align: justify">
+                    <h2>Resumen del Libro</h2>
+                    <p>El caos es lo que te hace diferente. Lo que la gente no entiende de ti o lo que desea que cambies. Pero el caos es parte de uno, por ello, cuando alguien no te entienda dile:«Ama mi caos»El mundo azul. Ama tu caoses la nueva novela de Albert Espinosa; una historia que enlaza conEl mundo amarilloyPulseras rojasy con la que se cierra una trilogía de colores que hablan de vida, de lucha y de muerte.Espinosa nos introduce en una narración de aventuras y emociones sobre un grupo de jóvenes que se enfrentan a un gran reto: rebelarse contra un mundo que trata de ordenar su caos.A través de cinco personajes, una isla y una búsqueda incesante por vivir, el autor vuelve a introducirnos en su particular universo con una historia que se desarrolla en un mundo onírico y fantástico, con un arranque contundente y un desenlace esperanzador y lleno de luz.</p>
+                </div> 
+                <div id="g_detalles" style="width: 90%; margin: auto">
+                    <h2>Detalles</h2>
+                    <table>
+                        <tr>
+                            <td>TEMATICA: </td>
+                            <td>Literatura</td>
+                        </tr>
+                        <tr>
+                            <td>ISBN: </td>
+                            <td> 97884663298114</td>
+                        </tr>
+                        <tr>
+                            <td>EDITORIAL: </td>
+                            <td>GIGAMESH</td>
+                        </tr>
+                        <tr>
+                            <td>PUBLICACION: </td>
+                            <td> Es 2016 </td>
+                        </tr>
+                        <tr>
+                            <td>PAGINAS: </td>
+                            <td>216 pag</td>
+                        </tr>
+                    </table>
+                    
+        
+                </div>
+        
+            </div>
+            <!-- aquí va la información -->
+        </div>
+        <footer id="pieDePagina">Pie De Pagina</footer>
+    </div>
+    <div class="btnArriba"></div>
+    <script>
+        function g_desplazar() {
+            var elmnt = document.getElementById("g_resumen");
+            elmnt.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#cabecera").load("./header.html");
+            // $("#sliderPrincipal").load("./formulario.html");
+            $("#pieDePagina").load("./footer.html");
+            $(".btnArriba").load("./botonarriba.html");
+        });
+    </script>
+</body>
+
+</html>

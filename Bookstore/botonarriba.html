@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .btnTop{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #D7263D;
+            border-radius: 100px;
+            cursor: pointer;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+        <span class="btnTop"><img src="./media/icons/iconfinder_ic_keyboard_arrow_up_48px_352469.png" alt="" width="60px"></span>
+
+    <script>
+            $(".btnTop").click(function(){
+                $("body, html").animate({scrollTop: "0px"}, 300)
+            })
+        
+            
+            $(window).scroll(function(){
+                if($(this).scrollTop() > 100){
+                    $(".btnTop").slideDown(500)
+                } else {
+                    $(".btnTop").slideUp(500)
+                }
+            })    
+    </script>
+</body>
+</html>

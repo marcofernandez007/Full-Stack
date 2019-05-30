@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slider Automatico</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        *{
+            margin: 2%;
+            padding: 0%;
+        }
+        .mySlides {
+            display:none;
+        }
+        .texto{
+            background-color: transparent;
+        }
+    </style>
+    </head>
+    <body>
+
+    <div class="w3-content w3-display-container">
+
+        <div class="w3-display-container mySlides">
+            <a href="https://www.youtube.com/"> <img src="C:\Users\Fernanda\Desktop\FULLSTACKnuevo\img_arte-ciencia/arte1.png" width ="900px" height="500px"> </a>
+        <div class="texto w3-display-middle w3-large w3-container w3-padding-16 w3-black">
+            Tragedias Completas
+        </div>
+        </div>
+
+        <div class="w3-display-container mySlides">
+            <a href="https://www.facebook.com/"> <img src="C:\Users\Fernanda\Desktop\FULLSTACKnuevo\img_arte-ciencia/arte2.jpg" width= "900px" height="500px"> </a>
+        <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
+            Segunda Imagen
+        </div>
+        </div>
+
+        <div class="w3-display-container mySlides">
+            <a href="https://www.youtube.com/"> <img src="C:\Users\Fernanda\Desktop\FULLSTACKnuevo\img_arte-ciencia/arte3.jpg" width = "900px" height="500px"> </a>
+        <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
+            Tercera Imagen
+        </div>
+        </div>
+
+        <div class="w3-display-container mySlides">
+            <a href="https://www.facebook.com/"> <img src="C:\Users\Fernanda\Desktop\FULLSTACKnuevo\img_arte-ciencia/arte4.png" width = "900px" height="500px"> </a>
+        <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
+            Cuarta Imagen
+        </div>
+        </div>
+
+        <div class="w3-display-container mySlides">
+            <a href="https://www.facebook.com/"> <img src="C:\Users\Fernanda\Desktop\FULLSTACKnuevo\img_arte-ciencia/arte5.jpg" width ="900px" height="500px"> </a>
+        <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
+            Quinta Imagen
+        </div>
+        </div>
+
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+	
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+        
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 3000); // Change image every 2 seconds
+}
+        
+    </script>
+
+</body>
+</html>

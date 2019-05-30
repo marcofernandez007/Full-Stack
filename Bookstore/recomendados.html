@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Recomendados</title>
+    <link rel="stylesheet" href="css/grid/gridRecomendados.css" type="text/css" />
+    <link rel="stylesheet" href="css/sliders.css" type="text/css" />
+    <link rel="stylesheet" href="css/w3.css" type="text/css" />
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body id="bodyCG">
+    <div id="principal">
+        <header id="cabecera">Cabecera</header>
+        <div style="margin-top: 20px;" id="sliderPrincipal">
+
+            <div id="informacion" style="background-color: #f1f1f1;"></div>
+
+            <div style="overflow: hidden;" class="w3-content w3-display-container uno">
+                <div class="tres mySlides2">
+                    <div><button class="boton w3-button w3-black w3-display-left button" onclick="plusDivs(-1)">&#10094;</button></div>
+                    <div class="dos col ">
+                        <a href="./libDis1.html">
+                            <img src="./ImagenesEditadas/Dis1.jpg" width="250px" height="250px"> </a>
+                    </div>
+                    <div class="dos col">
+                        <a href="./libciencia2.html">
+                            <img src="ImagenesEditadas/ciencia2.jpg" width="250px" height="250px"> </a>
+                    </div>
+                    <div class="dos col">
+                        <a href="./libciencia3.html">
+                            <img src="ImagenesEditadas/ciencia3.jpg" width="250px" height="250px"> </a>
+                    </div>
+                    <div class="dos col">
+                        <a href="./libciencia4.html">
+                            <img src="ImagenesEditadas/ciencia4.jpg" width="250px" height="250px"> </a>
+                    </div>
+                    <div><button class="boton w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                    </div>
+
+                </div>
+
+
+                <div class="tres mySlides2">
+                    <div><button class="boton w3-button w3-black w3-display-left button" onclick="plusDivs(-1)">&#10094;</button></div>
+                    <div class="dos col ">
+                        <a href="./lib.Gasuno.html">
+                            <img src="./ImagenesEditadas/Gas1.jpg" width="250px" height="250px"> </a>
+                    </div>
+                    <div class="dos col">
+                        <a href="./libDis2.html">
+                            <img src="ImagenesEditadas/Dis2.jpg" width="250px" height="250px"> </a>
+                    </div>
+                    <div class="dos col">
+                        <a href="./libDis3.html">
+                            <img src="ImagenesEditadas/Dis3.jpg" width="250px" height="250px"> </a>
+                    </div>
+                    <div class="dos col">
+                        <a href="./libDis4.html">
+                            <img src="ImagenesEditadas/Dis4.jpg" width="250px" height="250px"> </a>
+                    </div>
+                    <div>
+                        <button class="boton w3-button w3-black w3-display-right " onclick="plusDivs(1)">&#10095;</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer id="pieDePagina">Pie De Pagina</footer>
+    </div>
+    <div class="btnArriba"></div>
+    <script>
+        $(document).ready(function() {
+            $("#cabecera").load("./header.html");
+            // $("#sliderPrincipal").load("./formulario.html");
+            $("#pieDePagina").load("./footer.html");
+            $(".btnArriba").load("./botonarriba.html");
+        });
+    </script>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides2");
+
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
