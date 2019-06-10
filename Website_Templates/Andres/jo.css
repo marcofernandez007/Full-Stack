@@ -1,0 +1,38 @@
+.nav-link{
+color: black;
+}
+.nav-tabs{
+    background-color: green
+}
+.bus{
+padding: 6px;
+border: radius 3%;
+background-color: white;
+width: 30%;
+height: 35px;
+margin-top:3px;
+border-radius: 15px;
+position: relative;left: 30%; 
+}
+.pbus{
+    color: gray
+}
+.im{
+    width: 100%;
+    height: 600px;
+}
+.ver{
+    width: 100%;
+    height: 50px;
+    background-color:green;
+    text-align: right
+}
+.lora{
+text-align: center
+}
+.card-body{
+    background-color: green
+}
+.he{
+    position: relative; left: 20%;
+}
