@@ -1,0 +1,43 @@
+#bodyCG{
+    padding: 0px;
+    margin: 0px;
+}
+
+#principal *{
+    /* text-align: center; */
+    /* background: skyblue; */
+    font-family: sans-serif;
+}
+
+#principal{
+    display: grid;
+    /* height: 124vh; */
+    grid-gap: 10px;
+    padding: 0px;
+    
+    grid-template-areas: 
+    "cabecera"
+    "sliderPrincipal"
+    "pieDePagina";
+
+    /* grid-template-rows: 1fr 1fr 1fr; */
+}
+
+#cabecera{
+    grid-area: cabecera;
+}
+
+#sliderPrincipal{
+    grid-area: sliderPrincipal;
+    overflow: hidden;
+}
+
+#pieDePagina{
+    grid-area: pieDePagina;
+}
+
+/* @media (min-width:500px){
+    #principal{
+        grid-template-rows: 19.5% 58% 22.5%
+    }
+} */

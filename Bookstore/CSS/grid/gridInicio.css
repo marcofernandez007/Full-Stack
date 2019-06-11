@@ -1,0 +1,84 @@
+/* *{
+    border: 1px solid black;
+} */
+
+#bodyCG{
+    padding: 0px;
+    margin: 0px;
+}
+
+#principal *{
+    text-align: center;
+    /* background: skyblue; */
+    font-family: sans-serif;
+}
+
+#principal{
+    display: grid;
+    /* height: 400vh; */
+    grid-gap: 10px;
+    padding: 0px;
+    
+    grid-template-areas: 
+    "cabecera"
+    "sliderPrincipal"
+    "novedades"
+    "importados"
+    "pieDePagina";
+
+    /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+}
+
+#cabecera{
+    grid-area: cabecera;
+}
+
+#sliderPrincipal{
+    grid-area: sliderPrincipal;
+}
+
+#masVendidos{
+    grid-area: masVendidos;
+}
+
+#novedades{
+    grid-area: novedades;
+}
+
+#importados{
+    grid-area: importados;
+}
+
+#filosofia{
+    grid-area: filosofia;
+}
+
+#recomendados{
+    grid-area: recomendados;
+}
+
+#historia{
+    grid-area: historia;
+}
+
+#eventos{
+    grid-area: eventos;
+}
+
+#pieDePagina{
+    grid-area: pieDePagina;
+}
+
+@media (min-width: 500px){
+    #principal{
+        grid-template-areas: 
+        "cabecera cabecera"
+        "sliderPrincipal sliderPrincipal"
+        "novedades novedades"
+        "importados importados"
+        "pieDePagina pieDePagina";
+
+        /* grid-template-rows: 6% 18% 24% 24% 15% 15% 15% 23% 7%; */
+        grid-template-columns: 3.5fr 1fr;
+    }
+}

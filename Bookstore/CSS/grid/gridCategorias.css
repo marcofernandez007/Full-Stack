@@ -1,0 +1,59 @@
+#bodyCG{
+    padding: 0px;
+    margin: 0px;
+}
+
+#principal *{
+    text-align: center;
+    background: skyblue;
+    font-family: sans-serif;
+}
+
+#principal{
+    display: grid;
+    height: 200vh;
+    grid-gap: 10px;
+    padding: 0px;
+    
+    grid-template-areas: 
+    "cabecera"
+    "menuIconos"
+    "menu"
+    "mosaicoLibros"
+    "pieDePagina";
+
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#cabecera{
+    grid-area: cabecera;
+}
+
+#menuIconos{
+    grid-area: menuIconos;
+}
+
+#menu{
+    grid-area: menu;
+}
+
+#mosaicoLibros{
+    grid-area: mosaicoLibros;
+}
+
+#pieDePagina{
+    grid-area: pieDePagina;
+}
+
+@media (min-width: 500px){
+    #principal{
+        grid-template-areas:
+        "cabecera cabecera"
+        "menuIconos menuIconos"
+        "menu mosaicoLibros"
+        ". mosaicoLibros"
+        "pieDePagina pieDePagina";
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 12% 15% 30% 40% 10%;
+    }
+}
