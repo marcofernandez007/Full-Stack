@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif%7CRubik&display=swap');
+* {
+   margin:0;
+   padding:0;
+}
+
+#headerLogo:hover{
+   cursor: pointer;
+   filter: invert(1);
+}
+
+#menuCarrito:hover{
+   cursor: pointer;
+   filter: invert(1);
+}
+
+.contenedorHead{
+   margin-bottom: 60px;
+   font-family: Montserrat;
+   font-weight: bold;
+   font-size: 13px;
+   text-decoration: none; 
+   color:black;
+}
+.menu{
+   width: 100%;
+   position: absolute;
+   z-index: 1;
+}
+#arriba{
+   width: 100%;
+   height: 110px;
+   background-color: rgb(47, 111, 146);
+   z-index: -1;
+   
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+}
+#arriba section{
+   width: 40%;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-evenly;
+}
+#arriba section input{
+   height: 20px;
+   width:60%;
+}
+#header {
+   width:100%;
+   /* height: 120px; */
+   top: 20%;
+   margin:auto;
+   font-family: 'Rubik', sans-serif;
+   z-index: 1;
+}
+.nav{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   z-index: 1;
+   font-size: 18px;
+}
+ul, ol {
+   list-style:none;
+}
+.nav a{
+   text-decoration:none;
+   text-align: center;
+}
+.nav a li {
+   color: white;
+   text-decoration:none;
+   text-align: center;
+   line-height: 50px;
+   padding: 4.5px 45px;
+   transition: 500ms;
+   
+   position: relative;
+}
+.nav li::before {
+   content: " ";
+   display: block;
+   position: absolute;
+   background-color: #ED635A;
+   bottom: 0;
+   left: 0;
+   width: 0%;
+   height: 3px;
+   transition: 700ms;
+}
+.nav li:hover::before{
+   width: 100%;
+}
+.nav li::after {
+   content: " ";
+   display: block;
+   position: absolute;
+   background-color: #FF776D;
+   top: 0;
+   right: 0;
+   width: 0%;
+   height: 3px;
+   transition: 700ms;
+}
+.nav a li:hover::after{
+   width: 100%;
+}
+
+.nav a:hover li {
+   background-color:#5588a3;
+}
+.nav li ul {
+   display:none;
+   position:absolute;
+   min-width:20%;
+}
+
+.nav li:hover > ul {
+   display:block;
+}
+
+.nav li ul li {
+   position:relative;
+}
+
+.menu{
+   width: 100%;
+   height: 70px;
+   background-color:#145374 ;
+   -webkit-box-shadow: 0px 2px 10px -2px rgba(0,0,0,0.75);
+   -moz-box-shadow: 0px 2px 10px -2px rgba(0,0,0,0.75);
+   box-shadow: 0px 2px 10px -2px rgba(0,0,0,0.75);
+   
+   
+}
+.login{
+   width: 10%;
+   height: 20%;
+   background-color: #5588a3;
+   position: absolute;
+   left: 75%;
+   top:0%;
+   border-right: #145374 2px solid;
+   border-left: #145374 2px solid;
+}
+#userState{
+   text-align: center;
+}
+.userNuevo{
+   text-align: center;
+}
+.userNuevo section{
+   cursor: pointer;
+}
+.userNuevo a{
+   text-decoration: none;
+   color: black;
+}
+#userState{
+   background-color: rgb(146, 201, 219);
+   border-radius: 20px;
+   height: auto;
+   border: 2px solid #6665DD;
+   margin-bottom: 7px;
+   cursor: pointer;
+   padding: 1.5px 5px;
+   box-shadow: 2px 3px 4px 2px #222;
+}
+#userState:hover{
+   color: rgb(143, 179, 90);
+   transition: 700ms;
+}
+#userLogin{
+   background-color: rgb(224, 224, 224);
+   border-radius: 20px;
+   height: auto;
+   border: 2px solid #E6B89C;
+   cursor: pointer;
+   padding: 1.5px 5px;
+   box-shadow: 2px 3px 4px 2px #222;
+}
+#userLogin img{
+   filter: drop-shadow(1px 1px 1px #222)
+}
+.Overlay{
+   width: 100%;
+   height: 100%;
+   opacity: 0;
+   display: none;
+   position: fixed;
+   background-color: rgba(68, 67, 67, 0.561);
+   top: 0;
+   left: 0;
+   z-index: 3;
+}
+.contenidoOverlay{
+   width: 20%;
+   min-width: 240px;
+   height: 50%;
+   background-color: #f5e5cd;
+   z-index: 3;
+   padding: 15px;
+   border-radius: 30px;  
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   flex-wrap: wrap;
+   margin: auto;
+   position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+}
+.contenidoOverlay input[type='text'], input[type='password']{
+   width: 100%;
+   height: 20px;
+   padding: 5px;
+   margin: 5px;   
+   border: none;
+}
+.contenidoOverlay img{
+   position: absolute;
+   top: 10px;
+   right: 20px;
+   cursor: pointer;
+}
+.buttonLogin{
+   width: 100%;
+   padding: 5px;
+   margin: auto;
+   background-color: #FE938C;
+   border: none;
+   font-weight: bold;
+   color: white;
+   font-size: 20px;
+   cursor: pointer;
+}
+@media (max-width: 900px){
+   .nav{
+      flex-direction: column;
+      background-color:#145374 ;
+   }
+   .nav a{
+      width: 100%;
+      text-align: center;
+   }
+   .nav li:hover{
+      background-color:#5588a3;
+   }
+   .nav a li{
+      padding: 0;
+      transition: none;
+   }
+   .nav a li:hover{
+      background-color:none;
+      margin-top:0;
+      padding: 0;
+   }
+   .nav li::before{
+      transition: 1.5s;
+   }
+   .nav li::after{
+      transition: 1.5s;
+   }
+   .contenedorHead{
+      margin-bottom: 200px;
+   }
+}

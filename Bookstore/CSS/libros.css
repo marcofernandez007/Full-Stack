@@ -1,0 +1,62 @@
+#g_contenedor {
+    width: 95%;
+    margin: 20px 0px;
+}
+
+#g_contenedor hr{
+    margin: auto;
+}
+
+#g_descripcion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#g_imagen {
+    height: 400px;
+    width: 35%;
+    margin-bottom: 20px;
+}
+
+#g_titulo {
+    height: 300px;
+    width: 40%;
+}
+
+#g_titulo h2{
+    margin: 10px 0px;
+}
+
+#g_prod_dato {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#g_comprar {
+    width: 30%;
+    height: 50px;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+#g_comprar>button {
+    background-color: lightgoldenrodyellow;
+    color: darkorange;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+#g_prod-desc {
+    cursor: pointer;
+}
+
+#g_detalles h2{
+    margin: 10px 0px;
+}
+
+#g_resumen h2{
+    margin: 10px 0px;
+}

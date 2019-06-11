@@ -1,0 +1,144 @@
+
+/* *{
+  border: 1px solid black;
+} */
+
+
+/* .contenido-hero {
+    margin-top: 40px;
+    text-align: center;
+} */
+.contenido-hero form {
+    position: relative;
+    margin-bottom: 0;
+}
+
+.contenido-hero form #buscador {
+    height: 50px;
+    margin-bottom: 0;
+}
+
+.contenido-hero form .submit-buscador {
+    position: absolute;
+    right:0;
+    top:0;
+    height: 100%;
+    padding: 0;
+    display: block;
+    text-indent: -9999px;
+    width: 50px;
+    background-image: url(../media/lupa.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    border:none;
+}
+
+.autocomplete {
+  position: relative;
+  /* display: inline-block; */
+  /* overflow: hidden; */
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 92%;
+}
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
+/* - ----------------------- Libros ----------------------- */
+
+#g_contenedor {
+  width: 95%;
+  margin: 20px 0px;
+  padding-top: 50px;
+}
+
+#g_contenedor hr{
+  margin: auto;
+}
+
+#g_descripcion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#g_imagen {
+  height: 400px;
+  width: 35%;
+  margin-bottom: 20px;
+}
+
+#g_titulo {
+  height: 300px;
+  width: 40%;
+}
+
+#g_titulo h2{
+  margin: 10px 0px;
+}
+
+#g_prod_dato {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#g_comprar {
+  width: 30%;
+  height: 50px;
+  cursor: pointer;
+  margin: 10px auto;
+}
+
+#g_comprar>button {
+  background-color: lightgoldenrodyellow;
+  color: darkorange;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+#g_prod-desc {
+  cursor: pointer;
+}
+
+#g_detalles h2{
+  margin: 10px 0px;
+}
+
+#g_resumen h2{
+  margin: 10px 0px;
+}
