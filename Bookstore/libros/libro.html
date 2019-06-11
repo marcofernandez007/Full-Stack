@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Plantilla Libro</title>
+    <style>
+    *{
+        /*border: 1px solid black;*/
+    }
+    #g_contenedor{
+        width: 95%;
+    }
+    #g_descripcion{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    #g_imagen{
+        height: 300px;
+        width: 35%;
+    }
+    #g_titulo{
+        height: 300px;
+        width: 40%;
+    }
+    #g_prod_dato{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    #g_comprar{
+        width: 30%;
+        height: 50px;
+        cursor:pointer;
+        margin: auto;
+    }
+    #g_comprar>button{
+        background-color: lightgoldenrodyellow;
+        color: darkorange;
+        font-weight: bolder;
+        cursor:pointer;
+    }
+    #g_prod-desc{
+        cursor: pointer;
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <div id="g_contenedor">
+        <div id="g_descripcion">
+            <div id="g_imagen">
+                <img src="ImagenesEditadas/Dis2.jpg" width="100%" height="100%">
+            </div>
+            <div id="g_titulo">
+                <h2 style="text-align: center">Storyelling</h2>
+                <p>Autor:Guillaume Lamarre</p>
+                <div id="g_prod-desc" style="text-align: justify" onclick="g_desplazar()">
+                    "Las historias nos emocionan, nos inquietan, permanecen en nuestra memoria y reaparecen para influirnos cuando tenemos que actuar. Este libro desgrana el arte del storytelling como técnica de comunicación y lo aborda en todas sus dimensiones —vivencial, cultural, racional— para que comprendamos bien sus mecanismos de funcionamiento y logremos transmitir eficazmente mensajes en forma de narración.  <i>(Ver más)</i>
+                </div>
+                <div id="g_prod_dato">
+                    <p>$67.000</p>
+                    <div id="g_cant">
+                        <label for="g_opcion">Cantidad:</label>
+                        <select name="g_opcion" id="g_opcion">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="g_comprar">
+                    <button id="btn-comprar" style="height: 50px; width: 100%">COMPRAR LIBRO</button>
+                </div>
+            </div>
+        </div>
+        <hr style="width: 90%">
+        <div id="g_resumen" style="width: 90%; margin: auto; text-align: justify">
+            <h2>Resumen del Libro</h2>
+            <p>Las historias nos emocionan, nos inquietan, permanecen en nuestra memoria y reaparecen para influirnos cuando tenemos que actuar. Este libro desgrana el arte del storytelling como técnica de comunicación y lo aborda en todas sus dimensiones —vivencial, cultural, racional— para que comprendamos bien sus mecanismos de funcionamiento y logremos transmitir eficazmente mensajes en forma de narración.</p>
+        </div> 
+        <div id="g_detalles" style="width: 90%; margin: auto">
+            <h2>Detalles</h2>
+            <table>
+                <tr>
+                    <td>TEMATICA: </td>
+                    <td>Diseño</td>
+                </tr>
+                <tr>
+                    <td>ISBN/EAN: </td>
+                    <td> 9788425232046</td>
+                </tr>
+                <tr>
+                    <td>EDITORIAL: </td>
+                    <td>Gustavo Gill</td>
+                </tr>
+                <tr>
+                    <td>PUBLICACION: </td>
+                    <td>Rústica 2019 </td>
+                </tr>
+                <tr>
+                    <td>PAGINAS: </td>
+                    <td>174 pag</td>
+                </tr>
+            </table>
+            
+
+        </div>
+
+    </div>
+    <script>
+        function g_desplazar() {
+            var elmnt = document.getElementById("g_resumen");
+            elmnt.scrollIntoView({ behavior: 'smooth'});
+            }
+    </script>
+</body>
+</html>

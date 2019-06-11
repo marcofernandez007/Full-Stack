@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/buscador.css">
+    <title>Plantilla Libro</title>
+    <style>
+    *{
+        /*border: 1px solid black;*/
+    }
+    #g_contenedor{
+        width: 95%;
+    }
+    #g_descripcion{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    #g_imagen{
+        height: 300px;
+        width: 35%;
+    }
+    #g_titulo{
+        height: 300px;
+        width: 40%;
+    }
+    #g_prod_dato{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    #g_comprar{
+        width: 30%;
+        height: 50px;
+        cursor:pointer;
+        margin: auto;
+    }
+    #g_comprar>button{
+        background-color: lightgoldenrodyellow;
+        color: darkorange;
+        font-weight: bolder;
+        cursor:pointer;
+    }
+    #g_prod-desc{
+        cursor: pointer;
+    }
+    
+    
+    </style>
+</head>
+<body>
+        <div class="contenedorHead">
+                <div id="arriba">
+                   <div id="headerLogo" onclick="window.location = '/'"><img src="../media/icons/open-book.png" alt="logo" width="60px" height="90%"></div>
+                   <div class="Overlay">
+                      <div class="contenidoOverlay">
+                         <img src="./media/icons/error.png" alt="" width="20px" onclick="cerrarOverlay()">
+                         
+                         <input type="text" placeholder="Ingrese el Usuario" id="usuarios">
+                         
+                         <input type="password" placeholder="Ingrese su Contraseña" id="contraseña2">
+                         
+                         <button class="buttonLogin" onclick="analisis2()">INGRESA AHORA</button>
+                      </div>
+                   </div>
+                    <div class="container" style="width: 49.4%;">
+                      <div class="contenido-hero">
+                         <form id="busqueda" class="formulario">
+                            <div class="autocomplete" style="background-color: #f1f1f1;">
+                               <input class="u-full-width" type="text" placeholder="Busca el libro..." id="myInput">
+                            </div>
+                            <input type="submit" id="submit-buscador" class="submit-buscador">
+                         </form>
+                      </div>
+                      <div id="informacion" style="position: absolute; width: 49%; z-index: 2; background-color: #f1f1f1;">
+                         
+                      </div>
+                   </div>
+                   <div class="userNuevo">
+                      <img src="../media/icons/boss.png" alt="login">
+                      <div id="userState">
+                         <a onclick='abrirOverlay()'>LOG IN</a>
+                      </div>
+                      <div id="userLogin">
+                         <a href='../registro.html'>REGISTRO</a>
+                      </div>
+                   </div>
+                   <div id="menuCarrito"><img src="../media/icons/shopping-cart.png" alt="compras"width="40px"></div>
+                </div>
+                <div class="menu">
+                   <div id="header">
+                      <ul class="nav">
+                         <a href="../recomendados.html"><li>Recomendados</li></a>
+                         <a href="../categorias.html"><li>Categorías</li></a>
+                         <a href="../throru.html"><li>Thor U  </li></a>
+                         <a href="../nosotros.html"><li>¿Quiénes Somos?</li></a>
+                      </ul>
+                   </div>
+                </div>
+             </div>
+             
+             <script src="../js/header.js"></script>
+             <script src="../js/buscador.js"></script>
+    <div id="g_contenedor">
+        <div id="g_descripcion">
+            <div id="g_imagen">
+                <img src="ImagenesEditadas/Lit4.jpg" width="100%" height="100%">
+            </div>
+            <div id="g_titulo"><br><br>
+                <h2 style="text-align: center">Juego de tronos</h2><br>
+                <p>Autor: George R.R. Martin</p>
+                <div id="g_prod-desc" style="text-align: justify" onclick="g_desplazar()">
+                    "En un mundo cuyas estaciones duran décadas y en el que retazos de una magia inmemorial y olvidada surgen en los rincones más sombrios y maravillosos, la traición y la lealtad, la compasión y la sed de venganza, el amor y el poder hacen del juego de tronos una poderosa trampa que atrapa en sus fauces a los personajes... y al lector. "El regreso triunfal de Martin a la fantasía de más alta calidad... con personajes desarrollados con maestría, prosa hábil y pura obstinación."  <i>(Ver más)</i>
+                </div>
+                <div id="g_prod_dato">
+                    <p>$83.200</p>
+                    <div id="g_cant">
+                        <label for="g_opcion">Cantidad:</label>
+                        <select name="g_opcion" id="g_opcion">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="g_comprar">
+                    <button id="btn-comprar" style="height: 50px; width: 100%">COMPRAR LIBRO</button>
+                </div>
+            </div>
+        </div>
+        <hr style="width: 90%">
+        <div id="g_resumen" style="width: 90%; margin: auto; text-align: justify">
+            <h2>Resumen del Libro</h2>
+            <p>Tras el largo verano, el invierno se acerca a los Siete Reinos. Lord Eddars Stark, señor de Invernalia, deja sus dominios para unirse a la corte del rey Robert Baratheon el Usurpador, hombre díscolo y otrora guerrero audaz cuyas mayores aficiones son comer, beber y engendrar bastardos. Eddard Stark desempeñará el cargo de Mano del Rey e intentará desentrañar una maraña de intrigas que pondrá en peligro su vida... y la de los suyos.</p>
+        </div> 
+        <div id="g_detalles" style="width: 90%; margin: auto">
+            <h2>Detalles</h2>
+            <table>
+                <tr>
+                    <td>TEMATICA: </td>
+                    <td>Literatura</td>
+                </tr>
+                <tr>
+                    <td>ISBN: </td>
+                    <td> 9788496208964</td>
+                </tr>
+                <tr>
+                    <td>EDITORIAL: </td>
+                    <td>GIGAMESH</td>
+                </tr>
+                <tr>
+                    <td>PUBLICACION: </td>
+                    <td> Barcelona 2011 </td>
+                </tr>
+                <tr>
+                    <td>PAGINAS: </td>
+                    <td>800 pag</td>
+                </tr>
+            </table>
+            
+
+        </div>
+
+    </div>
+    <script>
+        function g_desplazar() {
+            var elmnt = document.getElementById("g_resumen");
+            elmnt.scrollIntoView({ behavior: 'smooth'});
+            }
+    </script>
+       <style>
+            .logo{
+                width: 35%;
+                height: 100%;
+                text-align: center;
+            }    
+            
+            .Footer{
+                height: auto;
+                overflow: hidden;
+                margin: auto;
+                box-sizing: border-box;
+            }
+            
+            .footerGris ul{
+                list-style: none;
+                padding: 7px;
+                border: 1px solid black;
+                background-color: #3C5475;
+                color: white;
+                letter-spacing: 2px;
+            }
+            
+            .footerGris{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            
+            .footerGris div{
+                margin: 20px 20px;
+            }
+            
+            .contenedorPadre{
+                background-image: url("../media/fondofooter.jpg");
+                background-attachment: fixed;
+                background-size: cover;
+                padding: 3px;
+                color: black;
+                border-top: 3px solid #145374;
+                border-bottom: 1.5px solid #145374;
+                height: auto;
+                width: auto;
+            }
+            
+            .genericoFooter{
+                background-color: rgba(211, 211, 211, 0.4);
+                width: 90%;
+                height: 90%;
+                margin: auto;
+                vertical-align: middle;
+                border-radius: 20px;
+                padding: 15px;
+                
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+            }
+            
+            .footerRedes img{
+                margin: 0 7px;
+            }
+            
+            .privacidad{
+                margin: center;
+                border: black solid ;
+                justify-content: center;
+                color: white;
+                height: 40px;
+                width: 100%;
+                background-color: black;
+                
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .derechos{
+                width: 30%;
+            }
+            .terminos{
+                width: 20%;
+            }
+            
+            @media (max-width: 700px){
+                .genericoFooter{
+                    flex-direction: column;
+                }
+                
+                .footerGris{
+                    flex-direction: column;
+                }
+                
+                .footerGris div{
+                    margin: 10px 10px;
+                    max-width: 300px;
+                }
+                
+                .logo{
+                    width: 40%;
+                    height: 20%;
+                    text-align: center;
+                }
+            }
+        </style>
+    
+    <div class="Footer">
+                    <div class="contenedorPadre">
+                        <div class="genericoFooter">
+                        <div class="logo">
+                            <img src="../media/icons/odin.png" alt="" height="80%">
+                            <div class="footerRedes">
+                                <img title="facebook" src="../media/icons/facebook.png" alt="" height="40px" width="50px" >
+                                <img title="Instagram" src="../media/icons/instagram.png" alt=""height="40px" width="50px">
+                                <img title="feed" src="../media/icons/youtube.png" alt=""  height="40px" width="50px">
+                                <img title="twitter" src="../media/icons/twitter.png" alt=""  height="40px" width="50px">
+                                <img title="Pinterest" src="../media/icons/pinterest.png" alt=""  height="40px" width="50px">
+                            </div>
+                        </div>
+                        <section class="footerGris">
+                            <div>
+                                <br>
+                                <br>
+                                <ul> <b> CASA THOR</b>
+                                    <li>Avenida <b>calle 35 # 5-15</b> Bogota D.C</li>
+                                    <li>+57 (1) 703 59 95</li>
+                                    <li>comunicaciones@libreriathor.com.co</li>
+                                </ul>
+                                <br>
+                                <br>
+                                <ul> <b>HORARIO</b> <br>
+                                    <li>Lunes a viernes: 7 am a 7 pm</li>
+                                    <li>Sabados: 9 am a 4 pm</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <br>
+                                <br>
+                                <ul><b>THOR CALLE 40</b>
+                                    <li>Carrera 11 No 85-52</li>
+                                    <li>74567872</li>
+                                    <li>comunicaciones@libreriathor.com.co</li>
+                                </ul>
+                            </div>
+    
+                        </section>
+                    </div>
+             
+                    </div>
+                    <div class="privacidad">
+                        <div class="derechos">Libreria Thor © 2019. <br> Todos los derechos reservados. </div>
+                        <div class="terminos">Terminos | Condiciones</div>
+                    </div>
+                </div>
+</body>
+</html>
